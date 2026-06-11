@@ -626,7 +626,7 @@ while (!done) {
   think();
   callTool();
   appendToContext();
-  payAgain(); // 💸
+  pay()// 💸
 }
 ```
 
@@ -657,7 +657,7 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
   <!-- user -->
   <g>
     <rect x="20" y="150" width="120" height="60" rx="14" fill="none" stroke="#191919" stroke-width="2.5"/>
-    <text x="80" y="187" text-anchor="middle" style="font-family: Caveat; font-size: 26px; fill: #191919">você 🧑</text>
+    <text x="80" y="187" text-anchor="middle" style="font-family: Caveat; font-size: 26px; fill: #191919">você 👨🏽‍💻</text>
   </g>
   <!-- arrow user -> agent -->
   <path d="M145 178 C 180 170, 200 185, 235 178" fill="none" stroke="#191919" stroke-width="2.5" marker-end="url(#arr)"/>
@@ -734,8 +734,8 @@ Diferença: na AWS quem cria recurso é você. No agent, o loop decide quantas v
   <div style="background: #191919; border: 2.5px solid #191919; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; padding: 1.2rem 1.6rem">
     <div class="font-mono text-base" style="color: #F5F4EF">
       <span style="color: #788C5D">$</span> agent run<br>
-      <span style="color: #D4A27F">></span> Reescreve o kernel do Linux em Rust.<br>
-      <span style="color: #D4A27F">></span> Não erra.<span style="color: #CC785C">▌</span>
+      <span style="color: #D4A27F">></span> Reescreva o kernel do Linux em Rust.<br>
+      <span style="color: #D4A27F">></span> Não cometa erros!.<span style="color: #CC785C">▌</span>
     </div>
   </div>
 </div>
@@ -749,19 +749,29 @@ Diferença: na AWS quem cria recurso é você. No agent, o loop decide quantas v
 <v-click>
 
 <div class="flex items-center justify-center gap-10 mt-4">
-  <svg width="200" height="150" viewBox="0 0 200 150">
-    <!-- house -->
-    <path d="M40 138 L42 78 L158 76 L160 138 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
-    <path d="M30 80 Q 100 18 170 80" fill="none" stroke="#191919" stroke-width="2.5"/>
-    <rect x="88" y="104" width="26" height="34" fill="#D4A27F" stroke="#191919" stroke-width="2"/>
-    <rect x="54" y="92" width="20" height="18" fill="#F5F4EF" stroke="#191919" stroke-width="2"/>
-    <rect x="128" y="92" width="20" height="18" fill="#F5F4EF" stroke="#191919" stroke-width="2"/>
+  <svg width="260" height="170" viewBox="0 0 280 180">
+    <!-- ground -->
+    <path d="M6 168 Q 80 163, 150 168 T 274 167" fill="none" stroke="#191919" stroke-width="2.5"/>
+    <!-- chimney -->
+    <rect x="132" y="34" width="15" height="30" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
+    <!-- roof (gable, slightly wobbly) -->
+    <path d="M20 88 Q 60 54 100 26 Q 142 54 182 86 L168 90 L34 90 Z" fill="#D4A27F" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- house body -->
+    <path d="M33 167 L34 89 L167 88 L169 167 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- door -->
+    <path d="M88 167 L89 125 Q 101 121 114 125 L115 167 Z" fill="#CC785C" stroke="#191919" stroke-width="2.2"/>
+    <circle cx="109" cy="147" r="2" fill="#191919"/>
+    <!-- windows -->
+    <rect x="46" y="104" width="26" height="22" rx="2" fill="#F5F4EF" stroke="#191919" stroke-width="2.2"/>
+    <line x1="59" y1="105" x2="59" y2="125" stroke="#191919" stroke-width="1.5"/>
+    <rect x="128" y="104" width="26" height="22" rx="2" fill="#F5F4EF" stroke="#191919" stroke-width="2.2"/>
+    <line x1="141" y1="105" x2="141" y2="125" stroke="#191919" stroke-width="1.5"/>
     <!-- for sale sign -->
-    <line x1="178" y1="142" x2="178" y2="100" stroke="#191919" stroke-width="3"/>
-    <rect x="148" y="84" width="60" height="26" rx="4" fill="#f8e9e7" stroke="#BF4D43" stroke-width="2.5" transform="rotate(-4 178 97)"/>
-    <text x="178" y="102" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #BF4D43" transform="rotate(-4 178 97)">VENDE-SE</text>
+    <line x1="228" y1="167" x2="228" y2="112" stroke="#191919" stroke-width="3"/>
+    <rect x="190" y="84" width="78" height="30" rx="4" fill="#f8e9e7" stroke="#BF4D43" stroke-width="2.5" transform="rotate(-4 229 99)"/>
+    <text x="229" y="106" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #BF4D43" transform="rotate(-4 229 99)">VENDE-SE</text>
   </svg>
-  <div class="catch text-3xl text-left">Funcionar? Pode.<br>Mas quem paga os tokens<br>é a <span class="hl">escritura</span>.</div>
+  <div class="catch text-3xl text-left">Funcionar? Pode.<br>Mas quem paga os tokens<br>é a <span class="hl">escritura da casa</span>.</div>
 </div>
 
 </v-click>
@@ -770,7 +780,58 @@ Diferença: na AWS quem cria recurso é você. No agent, o loop decide quantas v
 O ponto: a pergunta errada é "o agent CONSEGUE?". Em cenário controlado, com budget
 infinito, agents fazem coisas absurdas (e os papers/demos adoram mostrar isso).
 A pergunta certa é "a fatura fecha?". Capability não é a restrição — a invoice é.
-Gancho pro próximo slide: e quando além de caro, ninguém tá olhando? → Replit.
+Se alguém citar runs longos: Simon Last (Notion) rodou agents por 13 dias seguidos — com
+rollback automático, test gates, tasks atômicas e checkpointing obsessivo via git.
+Funciona porque é um SISTEMA de engenharia em volta de um "trabalhador não confiável".
+(sitepoint.com/run-ai-coding-agents-continuously-days-without-losing-plot)
+Gancho pro próximo slide: e mesmo quando funciona E cabe no bolso... → comprehension debt.
+-->
+
+---
+
+<div class="kicker mb-4">parte 3 · o custo que não aparece na fatura</div>
+
+## Comprehension Debt
+
+<div class="mt-8 grid grid-cols-3 gap-8">
+
+<div v-click="1">
+  <div class="stat">5–7×</div>
+  <div class="stat-label">mais rápido: a IA gera código numa velocidade que nenhum humano absorve</div>
+</div>
+
+<div v-click="2">
+  <div class="stat">−17%</div>
+  <div class="stat-label">compreensão do próprio código (52 engenheiros, mesma velocidade de entrega — pior em <b>debugging</b>)</div>
+</div>
+
+<div v-click="3">
+  <div class="stat">4×</div>
+  <div class="stat-label">custo de manutenção no 2º ano quando o débito não é gerenciado</div>
+</div>
+
+</div>
+
+<v-click at="4">
+
+<div class="catch mt-10 text-3xl">O código existe. O entendimento, não.<br><span class="hl">Quem entendia era o modelo — e ele esqueceu<br>quando a sessão fechou.</span></div>
+
+</v-click>
+
+<div class="sources">
+Sources: <a href="https://addyosmani.com/blog/comprehension-debt/" target="_blank">addyosmani.com</a> · <a href="https://www.oreilly.com/radar/comprehension-debt-the-hidden-cost-of-ai-generated-code/" target="_blank">oreilly.com/radar</a> · <a href="https://arxiv.org/pdf/2512.08942" target="_blank">arxiv.org/2512.08942</a>
+</div>
+
+<!--
+Conceito (Addy Osmani): comprehension debt = o gap entre o código que existe no sistema
+e o que algum humano de fato entende.
+Escrever código É entender código: edge cases, micro-decisões de arquitetura, modelo mental.
+Com IA esse loop colapsa: descreve → gera → testes passam → ship.
+Diferente de technical debt, não faz atrito — cria FALSA CONFIANÇA. Aparece 6-18 meses
+depois, quando ninguém consegue modificar, debugar ou assumir o código.
+Fechamento amarra com o stateless do início: o único que "entendia" era o modelo,
+e o modelo não lembra de nada. A sessão fechou, o entendimento foi junto.
+Gancho: e quando além de tudo ninguém tá olhando? → Replit.
 -->
 
 ---
