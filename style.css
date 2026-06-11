@@ -182,6 +182,24 @@
   line-height: 1;
 }
 
+/* Sources footer */
+.sources {
+  position: absolute;
+  bottom: 1.1rem;
+  left: 4rem;
+  right: 4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
+.sources a {
+  color: var(--clay-dark);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--clay);
+}
+
 /* Strikethrough joke */
 .scratch {
   text-decoration: line-through;

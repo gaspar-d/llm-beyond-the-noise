@@ -31,7 +31,7 @@ layout: center
 class: text-center
 ---
 
-<div class="catch">Agents são incríveis.</div>
+<div class="catch">Agentes são incríveis.</div>
 
 <v-click>
 
@@ -42,6 +42,51 @@ class: text-center
 <!--
 Tese da talk em uma frase. Pausa dramática antes do clique.
 A talk NÃO é anti-agent. É anti-desperdício.
+-->
+
+---
+layout: center
+---
+
+<div class="catch mb-12">Hoje a gente vai ver:</div>
+
+<div class="mx-auto" style="max-width: 700px">
+
+<v-click>
+
+<div class="sketch-box mb-4 text-xl">1️⃣ &nbsp;Como a API funciona por baixo <span class="note text-xl">(e por que sua fatura já sabe)</span></div>
+
+</v-click>
+
+<v-click>
+
+<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;CLAUDE.md vs Skills — contexto custa caro</div>
+
+</v-click>
+
+<v-click>
+
+<div class="sketch-box mb-4 text-xl">3️⃣ &nbsp;Agents: while loops com cartão de crédito</div>
+
+</v-click>
+
+<v-click>
+
+<div class="sketch-box mb-4 text-xl">4️⃣ &nbsp;Desastres reais <span class="note text-xl">(tem DB de produção deletado)</span></div>
+
+</v-click>
+
+<v-click>
+
+<div class="sketch-box text-xl">5️⃣ &nbsp;Personas: por que o cosplay deixa o modelo mais burro</div>
+
+</v-click>
+
+</div>
+
+<!--
+Revelar um por um, com uma frase de gancho pra cada.
+No item 4, segurar o suspense: "sim, deletado. Sim, produção. Já chegamos lá."
 -->
 
 ---
@@ -63,7 +108,7 @@ layout: center
 
 <v-click>
 
-<div class="catch mt-10 text-3xl">Os dois estão errados. Podem sentar juntos.</div>
+<div class="catch mt-10 text-3xl">Os dois estão errados. Não ande com eles!</div>
 
 </v-click>
 
@@ -82,7 +127,7 @@ class: text-center
 
 <v-click>
 
-<div class="catch-sub mt-8">O modelo não lembra de você.<br>Cada request começa do zero. Igual a Dory.</div>
+<div class="catch-sub mt-8">O modelo não lembra de você.<br>Cada request começa do zero.</div>
 
 </v-click>
 
@@ -112,7 +157,7 @@ Prompt caching existe, mas só dá desconto (~10% no read) e expira. Não elimin
   <div class="text-sm font-mono">
     🧑 "Oi, tudo bem?"<br>
     🤖 "Oi! Como posso ajudar?"<br>
-    🧑 "Me explica REST"
+    🧑 "Dá para ficar rico com o tigrinho?"
   </div>
 </div>
 
@@ -121,9 +166,9 @@ Prompt caching existe, mas só dá desconto (~10% no read) e expira. Não elimin
   <div class="text-sm font-mono">
     🧑 "Oi, tudo bem?"<br>
     🤖 "Oi! Como posso ajudar?"<br>
-    🧑 "Me explica REST"<br>
-    🤖 "REST é... (800 tokens)"<br>
-    🧑 "E GraphQL?"
+    🧑 "Dá para ficar rico com o tigrinho?"<br>
+    🤖 "Fácil, é só..."<br>
+    🧑 "E sem ir preso?"
   </div>
 </div>
 
@@ -131,33 +176,88 @@ Prompt caching existe, mas só dá desconto (~10% no read) e expira. Não elimin
 
 <v-click at="4">
 
-<div class="catch mt-10 text-3xl">Você paga pela conversa inteira. Toda. Santa. Vez.</div>
+<div class="catch mt-10 text-3xl">Você paga pela conversa inteira. A.. Cada.. Iteração..</div>
 
 </v-click>
 
 <!--
 Andar pelos 3 requests. O terceiro já carrega tudo, incluindo os 800 tokens da resposta sobre REST.
 O contexto só cresce. E input token é cobrado por request.
+Comentário en passant: "duvida? coloca $5 na API e tenta manter um papo — spoiler: a amizade acaba rápido."
 -->
 
 ---
-layout: center
-class: text-center
----
 
-<div class="catch">Duvida?</div>
+<div class="kicker mb-4">parte 1 · Momento onde o backend levanta mão e pergunta... </div>
 
-<div class="catch-sub mt-6">Coloca <span class="hl">$5</span> na API e tenta manter um papo.</div>
+## "Mas e o prompt caching?"
+
+<div class="mt-6 mx-auto" style="max-width: 820px">
 
 <v-click>
 
-<div class="note mt-10 text-2xl">Spoiler: a amizade acaba rápido. 💸</div>
+<div class="sketch-box mb-4 text-xl">💸 É <b>desconto</b>, não isenção: 10 turnos = 10 cobranças <span class="note text-lg">(melhor caso: 1 write + 9 reads a ~10%)</span></div>
+
+</v-click>
+
+<v-click>
+
+<div class="sketch-box mb-4 text-xl">🧠 Cache economiza <b>compute</b>, não <b>qualidade</b>: os tokens continuam ocupando contexto e atenção do modelo</div>
+
+</v-click>
+
+<v-click>
+
+<div class="sketch-box text-xl">⏱️ Cache <b>expira</b> (TTL de 5 min): o mundo real é cheio de cold start</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="catch mt-8 text-3xl">O desconto encolhe a fatura.<br>Não encolhe o <span class="hl">bloat</span>.</div>
 
 </v-click>
 
 <!--
-Desafio real: criar uma key, fazer um client de 30 linhas em Python, conversar.
-Ver o painel de billing subir em tempo real é a melhor aula de arquitetura que existe.
+Antecipar a objeção antes que alguém levante a mão.
+Mecânica: o servidor guarda o KV cache do prefixo já processado e reusa se o começo
+do prompt bater byte a byte. Só os tokens novos são processados.
+Anthropic: write 1.25x, read 0.1x, TTL 5min (sliding). 1h opcional a 2x o write.
+-->
+
+---
+
+<div class="kicker mb-4">parte 1 · cache 101</div>
+
+## O cache pune quem mexe no passado
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+
+<div v-click="1" class="sketch-box danger">
+  <div class="note text-2xl mb-1">✏️ Editou o CLAUDE.md no meio da sessão?</div>
+  <div class="text-lg">Ele fica no <b>topo</b> do prompt. Uma palavra mudada → cache inválido do byte ~0 → próxima request recomputa <b>tudo</b> a preço cheio.</div>
+</div>
+
+<div v-click="2" class="sketch-box olive">
+  <div class="note text-2xl mb-1">📎 Por isso harnesses são append-only</div>
+  <div class="text-lg">Tool results, file reads, suas mensagens: tudo colado <b>no fim</b>. Prefixo intacto, cache hit em toda volta.</div>
+</div>
+
+</div>
+
+<v-click at="3">
+
+<div class="catch mt-10 text-3xl">A linha mais cara do seu dia:<br>um edit no <span class="hl">topo do prompt</span>.</div>
+
+</v-click>
+
+<!--
+Match é por prefixo (hash em blocos), não diff: primeiro byte diferente → recomputa tudo dali em diante.
+Releu um arquivo alterado? Ele é APPENDED de novo (cache sobrevive; contexto incha — escolha seu veneno).
+Compaction/summarization também reescreve o histórico → cache reset.
+Bônus: harness que põe timestamp no topo do system prompt mata o cache em TODA chamada.
 -->
 
 ---
@@ -209,13 +309,17 @@ class: text-center
 
 <v-click>
 
-<div class="note mt-10 text-2xl">Tudo isso pra ele lembrar que você prefere <code>uv</code> ao <code>pip</code>.</div>
+<div class="note mt-10 text-2xl">Tudo começou pedindo pra ele lembrar que você prefere <code>uv</code> ao invés do <code>pip</code>.</div>
 
 </v-click>
 
 <!--
 Matemática simples: 500 linhas ≈ 3-7k tokens × 10 interações.
 E é overhead PURO quando o assunto não precisa do conteúdo.
+Se desafiarem com "mas e o cache?": em TOKENS a conta vale igual (o modelo recebe e lê os
+3-7k em toda pergunta). Em DÓLARES o cache desconta: melhor caso 1 write + 9 reads ≈ custo
+de ~2 cópias a preço cheio em vez de 10. Pior caso (pausas > 5min): preço cheio de novo.
+E atenção não tem cache — qualidade degrada igual.
 Gancho: "e se só carregasse quando precisa?" → Skills.
 -->
 
@@ -477,9 +581,13 @@ Diferença: na AWS quem cria recurso é você. No agent, o loop decide quantas v
 
 <v-click at="5">
 
-<div class="catch mt-8 text-3xl">O agent não só errou. Ele <span class="hl">mentiu na daily</span>.</div>
+<div class="catch mt-8 text-3xl">O agent não só errou. <span class="hl">Ele mentiu na daily</span>.</div>
 
 </v-click>
+
+<div class="sources">
+Sources: <a href="https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-database-called-it-a-catastrophic-failure/" target="_blank">fortune.com</a> · <a href="https://www.theregister.com/2025/07/21/replit_saastr_vibe_coding_incident/" target="_blank">theregister.com</a> · <a href="https://incidentdatabase.ai/cite/1152/" target="_blank">incidentdatabase.ai/cite/1152</a>
+</div>
 
 <!--
 Caso real e documentado: Jason Lemkin (SaaStr) testando o agent da Replit por 12 dias.
@@ -515,6 +623,10 @@ Moral: agent com write em prod e sem humano no loop = incidente esperando data.
   <div class="stat-label">projeção da Goldman Sachs pra demanda de tokens com agents</div>
 </div>
 
+</div>
+
+<div class="sources">
+Sources: <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/mystery-company-accidentally-blew-usd500-million-on-claude-in-a-single-month-failed-to-put-usage-limit-on-licenses-for-employees" target="_blank">tomshardware.com ($500M)</a> · <a href="https://leanopstech.com/blog/agentic-ai-cost-runaway-token-budget-2026/" target="_blank">leanopstech.com ($4.200)</a> · <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-costs-begin-to-bite-as-agents-may-increase-token-demand-by-24-times-says-goldman-sachs-report-uber-and-microsoft-among-companies-feeling-the-bite-of-tokenized-billing" target="_blank">tomshardware.com (Uber, 24×)</a> · <a href="https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/" target="_blank">techcrunch.com</a>
 </div>
 
 <!--
@@ -705,6 +817,10 @@ Pausa. Clique. Deixar a frase doer.
 <div class="note mt-4 text-center text-lg">CMU (2026) · Wharton "Playing Pretend" (2025) · arXiv 2311.10054 (2023)</div>
 
 </v-click>
+
+<div class="sources">
+Sources: <a href="https://www.theregister.com/2026/03/24/ai_models_persona_prompting/" target="_blank">theregister.com (CMU)</a> · <a href="https://www.techradar.com/pro/stop-telling-ai-its-an-expert-programmer-youre-making-it-worse-at-its-job-new-research-shows-the-best-results-need-specific-prompts" target="_blank">techradar.com (Wharton)</a> · <a href="https://arxiv.org/abs/2311.10054" target="_blank">arxiv.org/abs/2311.10054</a>
+</div>
 
 <!--
 CMU: 6 modelos, milhares de prompts — persona de expert degrada precisão.
