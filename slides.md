@@ -545,7 +545,7 @@ Esse é o slide que justifica a tese da talk.
 
 ## "Achei um repo: as 1000 melhores Skills do mundo ⭐ 47k"
 
-<div class="mt-8 grid grid-cols-2 gap-8">
+<div class="mt-4 grid grid-cols-2 gap-8">
 
 <div v-click="1" class="sketch-box danger">
   <div class="note text-2xl mb-1">1000 front matters</div>
@@ -561,13 +561,26 @@ Esse é o slide que justifica a tese da talk.
 
 <v-click at="3">
 
-<div class="catch mt-10 text-3xl">Parabéns. Você reinventou o bloat. 👏</div>
+<div class="catch mt-6 text-3xl">Parabéns. Você reinventou o bloat. 👏</div>
+
+</v-click>
+
+<v-click at="4">
+
+<div class="sketch-box security mt-4 mx-auto" style="max-width: 880px">
+  <div class="note text-xl mb-1">☠️ Prêmio extra: superfície de ataque</div>
+  <div class="text-base">Skill é <b>instrução que seu agent obedece</b> — com as <b>suas</b> permissões. Skill aleatória da internet pode trazer prompt injection, exfiltrar código e secrets, ou rodar comandos maliciosos. É supply chain attack, versão "em linguagem natural".</div>
+</div>
 
 </v-click>
 
 <!--
 Skills não são mágica, são lazy loading. Lazy loading de 1000 coisas ainda é 1000 coisas.
 Curadoria > acumulação. Instale o que o SEU fluxo usa.
+Segurança: skill de repo aleatório = você instalando um prompt que o agent VAI seguir,
+com acesso ao seu código, suas envs, seu bash. npm package malicioso precisa explorar
+o runtime; skill maliciosa só precisa PEDIR. Trate skill de terceiro como dependência:
+leia antes de instalar, prefira fonte confiável.
 -->
 
 ---
@@ -577,7 +590,7 @@ layout: center
 <div class="kicker text-center mb-8">parte 2 · a regra</div>
 
 <div class="grid grid-cols-2 gap-8">
-  <div class="sketch-box clay text-center">
+  <div class="sketch-box olive text-center">
     <div class="catch text-3xl mb-3">CLAUDE.md</div>
     <div class="text-xl">Pequeno. Enxuto.<br>Só o que é necessário <b>toda</b> interação.</div>
     <div class="note mt-3 text-xl">"usa uv, não pip" → aqui ✅</div>

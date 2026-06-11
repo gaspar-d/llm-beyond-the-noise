@@ -108,6 +108,11 @@
   background: #f8e9e7;
 }
 
+.sketch-box.security {
+  border-color: var(--ink-soft);
+  background: #e4e3dd;
+}
+
 /* Hand-drawn underline accent */
 .sketch-under {
   position: relative;
