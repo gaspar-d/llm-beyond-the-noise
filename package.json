@@ -1,0 +1,15 @@
+{
+  "name": "llm-beyond-the-noise",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/theme-default": "latest",
+    "vue": "^3.5.13"
+  }
+}
