@@ -45,6 +45,74 @@ A talk NÃO é anti-agent. É anti-desperdício.
 -->
 
 ---
+
+<div class="kicker mb-2">in memoriam ⚰️</div>
+
+## Hype Deaths
+
+<div class="note text-2xl mb-2">Todas já foram "o fim da programação como conhecemos".</div>
+
+<div class="flex justify-center">
+<svg width="880" height="250" viewBox="0 0 880 250">
+  <!-- ground -->
+  <path d="M0 218 Q 110 211, 220 218 T 440 218 T 660 218 T 880 218" fill="none" stroke="#191919" stroke-width="2.5"/>
+  <!-- tombstone 1: ghost autocomplete -->
+  <g v-click="1">
+    <path d="M32 214 L34 64 Q36 18 100 16 Q164 18 166 64 L168 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
+    <text x="100" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
+    <text x="100" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Ghost</text>
+    <text x="100" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Autocomplete</text>
+    <text x="100" y="156" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2021 – 2023</text>
+    <text x="100" y="186" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">morto pelo chat</text>
+  </g>
+  <!-- tombstone 2: prompt engineer -->
+  <g v-click="2">
+    <path d="M252 214 L254 64 Q256 18 320 16 Q384 18 386 64 L388 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
+    <text x="320" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
+    <text x="320" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Prompt Engineer</text>
+    <text x="320" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2022 – 2024</text>
+    <text x="320" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">virou skill de todo mundo</text>
+  </g>
+  <!-- tombstone 3: vibe coder -->
+  <g v-click="3">
+    <path d="M472 214 L474 64 Q476 18 540 16 Q604 18 606 64 L608 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
+    <text x="540" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
+    <text x="540" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Vibe Coder</text>
+    <text x="540" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2025 – 2026</text>
+    <text x="540" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">o código chegou em prod</text>
+  </g>
+  <!-- tombstone 4: agents (fresh grave) -->
+  <g v-click="4">
+    <path d="M692 214 L694 64 Q696 18 760 16 Q824 18 826 64 L828 214 Z" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
+    <text x="760" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">✝ R.I.P.?</text>
+    <text x="760" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Agents</text>
+    <text x="760" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #B05730">2025 – ???</text>
+    <!-- fresh dirt mound -->
+    <path d="M700 218 Q760 196 820 218 Z" fill="#D4A27F" stroke="#191919" stroke-width="2"/>
+    <!-- shovel stuck in the dirt -->
+    <line x1="838" y1="148" x2="822" y2="206" stroke="#191919" stroke-width="3"/>
+    <path d="M818 204 Q830 198 836 210 Q828 222 816 214 Z" fill="#4a4a44" stroke="#191919" stroke-width="2"/>
+    <path d="M834 142 q6 -2 8 4 q-2 6 -8 4 Z" fill="none" stroke="#191919" stroke-width="2.5"/>
+  </g>
+</svg>
+</div>
+
+<v-click at="5">
+
+<div class="catch text-3xl mt-2">A cova já está cavada. <span class=hl>Mas será?</span></div>
+
+</v-click>
+
+<!--
+Hype deaths, não tech deaths: o autocomplete continua vivo (Cursor Tab), o que morreu
+foi cada um ser "o futuro da programação".
+Ghost autocomplete: revolução de 2021 (Copilot), virou paisagem quando o chat chegou.
+Prompt Engineer: vagas de $300k em 2023. Hoje? "saber escrever" voltou a ser requisito básico.
+Vibe Coder: nasceu no tweet do Karpathy (fev/2025), morreu quando o código chegou em produção.
+Agents: a pá tá ali do lado. Se a gente usar como tá usando, a data aparece sozinha.
+-->
+
+---
 layout: center
 ---
 
@@ -141,7 +209,7 @@ Prompt caching existe, mas só dá desconto (~10% no read) e expira. Não elimin
 
 <div class="kicker mb-4">parte 1 · a bola de neve</div>
 
-## Toda mensagem reenvia a conversa inteira
+## Toda mensagem precisa reenviar a conversa inteira
 
 <div class="mt-4 grid grid-cols-3 gap-6 items-start">
 
@@ -324,19 +392,101 @@ Gancho: "e se só carregasse quando precisa?" → Skills.
 -->
 
 ---
+
+<div class="kicker mb-4">parte 1 · dica grátis</div>
+
+## The book is on the table
+
+<div class="note text-xl mb-4">O mesmo prompt de code review em <span class="hl">inglês</span> vs <span class="hl">português</span>, a mesma informação:</div>
+
+<div class="mb-3">
+  <div class="flex items-center gap-4">
+    <span class="font-mono text-sm" style="width: 130px">EN · o200k</span>
+    <svg width="460" height="30" viewBox="0 0 460 30"><path d="M3 5 Q 120 2, 458 6 L 456 24 Q 180 28, 4 25 Z" fill="#788C5D" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <span class="note text-2xl">66 tokens</span>
+  </div>
+</div>
+
+<div v-click="1" class="mb-5">
+  <div class="flex items-center gap-4">
+    <span class="font-mono text-sm" style="width: 130px">PT · o200k</span>
+    <svg width="544" height="30" viewBox="0 0 544 30"><path d="M3 5 Q 140 2, 542 6 L 540 24 Q 210 28, 4 25 Z" fill="#CC785C" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <span class="note text-2xl font-bold">78 (+18%)</span>
+  </div>
+</div>
+
+<div class="mb-3">
+  <div class="flex items-center gap-4">
+    <span class="font-mono text-sm" style="width: 130px">EN · cl100k</span>
+    <svg width="470" height="30" viewBox="0 0 470 30"><path d="M3 5 Q 120 2, 468 6 L 466 24 Q 180 28, 4 25 Z" fill="#788C5D" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <span class="note text-2xl">67 tokens</span>
+  </div>
+</div>
+
+<div v-click="2">
+  <div class="flex items-center gap-4">
+    <span class="font-mono text-sm" style="width: 130px">PT · cl100k</span>
+    <svg width="637" height="30" viewBox="0 0 637 30"><path d="M3 5 Q 160 2, 635 6 L 633 24 Q 250 28, 4 25 Z" fill="#CC785C" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <span class="note text-2xl font-bold">91 (+36%)</span>
+  </div>
+</div>
+
+<v-click at="3">
+
+<div class="catch mt-6 text-3xl">Falar inglês com o modelo é um<br>desconto de <span class="hl">~20%</span> que ninguém usa.</div>
+
+</v-click>
+
+<div class="sources">
+Sources: medido com gpt-tokenizer (o200k/cl100k) · <a href="https://arxiv.org/pdf/2308.11878" target="_blank">arxiv.org/2308.11878 (Cabrita)</a>
+</div>
+
+<!--
+Tokenizers são treinados majoritariamente em inglês: palavras comuns viram 1 token;
+português fragmenta mais (acentos, palavras longas).
+Bônus que ninguém lembra: a RESPOSTA em português também custa mais — e output é ~5x o preço do input.
+Honestidade: tokenizers novos encolhem o gap (o200k 18% vs cl100k 36%). Tendência é melhorar.
+Cabrita (arXiv): tokenizer otimizado pra PT corta >35% dos tokens — prova o tamanho da penalidade.
+-->
+
+---
 layout: center
 class: text-center
 ---
 
 <div class="kicker mb-6">parte 2 · skills</div>
 
-<div class="catch">Skills = <span class="hl sketch-under">Lazy Loading</span></div>
+<div class="catch text-5xl">Skills ♥️ <span class="hl sketch-under">Lazy Loading</span></div>
+
+<div class="mx-auto mt-8" style="max-width: 860px">
+
+<div class="grid items-center" style="grid-template-columns: 1fr 250px; gap: 0.8rem 1.4rem">
 
 <v-click>
 
-<div class="catch-sub mt-8">Só o front matter vive no contexto: <span class="hl">~100 tokens</span>.<br>O resto carrega se — e só se — precisar.</div>
+<div class="sketch-box olive font-mono text-sm" style="text-align: left">---<br>name: release-process<br>description: Processo de release interno.<br>&nbsp;&nbsp;Use quando a tarefa envolver deploy.<br>---</div>
 
 </v-click>
+
+<div v-click="1" class="note text-xl" style="text-align: left">✅ front matter<br><b>~100 tokens</b>, sempre no contexto</div>
+
+<v-click>
+
+<div class="sketch-box font-mono text-sm" style="text-align: left; border-style: dashed; opacity: 0.6">
+# Release passo a passo<br>
+1. Congela a branch...<br>
+2. Roda o pipeline de...<br>
+3. Valida o changelog...<br>
+<span style="opacity: 0.7">... (+500 linhas de processo)</span>
+</div>
+
+</v-click>
+
+<div v-click="2" class="note text-xl" style="text-align: left">💤 corpo<br><b>~2.000 tokens</b>, só entra se — e só se — precisar</div>
+
+</div>
+
+</div>
 
 <!--
 Conceito que todo dev conhece: lazy loading.
@@ -559,6 +709,55 @@ class: text-center
 <!--
 Todo mundo aqui já levou susto com fatura da AWS. Mesmo instinto vale pra LLM.
 Diferença: na AWS quem cria recurso é você. No agent, o loop decide quantas voltas dá.
+-->
+
+---
+
+<div class="kicker mb-4">parte 3 · capacidade ≠ viabilidade</div>
+
+## O prompt dos sonhos
+
+<div class="mx-auto mt-6" style="max-width: 760px">
+  <div style="background: #191919; border: 2.5px solid #191919; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; padding: 1.2rem 1.6rem">
+    <div class="font-mono text-base" style="color: #F5F4EF">
+      <span style="color: #788C5D">$</span> agent run<br>
+      <span style="color: #D4A27F">></span> Reescreve o kernel do Linux em Rust.<br>
+      <span style="color: #D4A27F">></span> Não erra.<span style="color: #CC785C">▌</span>
+    </div>
+  </div>
+</div>
+
+<v-click>
+
+<div class="note text-2xl text-center mt-6">30 dias de loop depois... 🔄💸</div>
+
+</v-click>
+
+<v-click>
+
+<div class="flex items-center justify-center gap-10 mt-4">
+  <svg width="200" height="150" viewBox="0 0 200 150">
+    <!-- house -->
+    <path d="M40 138 L42 78 L158 76 L160 138 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
+    <path d="M30 80 Q 100 18 170 80" fill="none" stroke="#191919" stroke-width="2.5"/>
+    <rect x="88" y="104" width="26" height="34" fill="#D4A27F" stroke="#191919" stroke-width="2"/>
+    <rect x="54" y="92" width="20" height="18" fill="#F5F4EF" stroke="#191919" stroke-width="2"/>
+    <rect x="128" y="92" width="20" height="18" fill="#F5F4EF" stroke="#191919" stroke-width="2"/>
+    <!-- for sale sign -->
+    <line x1="178" y1="142" x2="178" y2="100" stroke="#191919" stroke-width="3"/>
+    <rect x="148" y="84" width="60" height="26" rx="4" fill="#f8e9e7" stroke="#BF4D43" stroke-width="2.5" transform="rotate(-4 178 97)"/>
+    <text x="178" y="102" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #BF4D43" transform="rotate(-4 178 97)">VENDE-SE</text>
+  </svg>
+  <div class="catch text-3xl text-left">Funcionar? Pode.<br>Mas quem paga os tokens<br>é a <span class="hl">escritura</span>.</div>
+</div>
+
+</v-click>
+
+<!--
+O ponto: a pergunta errada é "o agent CONSEGUE?". Em cenário controlado, com budget
+infinito, agents fazem coisas absurdas (e os papers/demos adoram mostrar isso).
+A pergunta certa é "a fatura fecha?". Capability não é a restrição — a invoice é.
+Gancho pro próximo slide: e quando além de caro, ninguém tá olhando? → Replit.
 -->
 
 ---
