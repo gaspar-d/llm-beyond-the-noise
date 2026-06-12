@@ -54,46 +54,76 @@ A talk NÃO é anti-agent. É anti-desperdício.
 
 <div class="flex justify-center">
 <svg width="880" height="250" viewBox="0 0 880 250">
-  <!-- ground -->
-  <path d="M0 218 Q 110 211, 220 218 T 440 218 T 660 218 T 880 218" fill="none" stroke="#191919" stroke-width="2.5"/>
+  <!-- ground + pebbles -->
+  <path d="M0 220 Q 110 213, 220 220 T 440 220 T 660 220 T 880 220" fill="none" stroke="#191919" stroke-width="2.5"/>
+  <ellipse cx="222" cy="226" rx="6" ry="2.5" fill="none" stroke="#191919" stroke-width="1.5"/>
+  <ellipse cx="448" cy="228" rx="4" ry="2" fill="none" stroke="#191919" stroke-width="1.5"/>
+  <ellipse cx="662" cy="225" rx="5" ry="2" fill="none" stroke="#191919" stroke-width="1.5"/>
   <!-- tombstone 1: ghost autocomplete -->
   <g v-click="1">
-    <path d="M32 214 L34 64 Q36 18 100 16 Q164 18 166 64 L168 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
-    <text x="100" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-    <text x="100" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Ghost</text>
-    <text x="100" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Autocomplete</text>
-    <text x="100" y="156" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2021 – 2023</text>
-    <text x="100" y="186" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">morto pelo chat</text>
+    <ellipse cx="100" cy="219" rx="74" ry="5" fill="#191919" opacity="0.08"/>
+    <g transform="rotate(-2 100 216)">
+      <path d="M34 218 L33 80 Q32 24 64 18 Q82 14 100 15 Q120 14 138 19 Q167 26 167 80 L166 218 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M48 200 L47 78 Q47 38 74 31" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.3"/>
+      <path d="M132 36 l9 11 l-7 9" fill="none" stroke="#191919" stroke-width="1.5" opacity="0.45"/>
+      <text x="100" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
+      <text x="100" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Ghost</text>
+      <text x="100" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Autocomplete</text>
+      <text x="100" y="156" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2021 – 2023</text>
+      <text x="100" y="186" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">morto pelo chat</text>
+    </g>
+    <path d="M38 219 q2 -10 4 0 m4 0 q2 -12 4 0 m4 0 q2 -8 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
+    <path d="M150 219 q2 -11 4 0 m4 0 q2 -8 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
   </g>
   <!-- tombstone 2: prompt engineer -->
   <g v-click="2">
-    <path d="M252 214 L254 64 Q256 18 320 16 Q384 18 386 64 L388 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
-    <text x="320" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-    <text x="320" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Prompt </text>
-    <text x="320" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Engineer</text>
-    <text x="320" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2022 – 2024</text>
-    <text x="320" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">virou skill de todo mundo</text>
+    <ellipse cx="320" cy="219" rx="74" ry="5" fill="#191919" opacity="0.08"/>
+    <g transform="rotate(1.5 320 216)">
+      <path d="M254 218 L255 92 L266 88 L267 56 Q268 26 296 22 Q320 18 344 22 Q372 26 373 56 L374 88 L385 92 L386 218 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M270 200 L270 96" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.3"/>
+      <text x="320" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
+      <text x="320" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Prompt </text>
+      <text x="320" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Engineer</text>
+      <text x="320" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2022 – 2024</text>
+      <text x="320" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">virou skill de todo mundo</text>
+    </g>
+    <path d="M260 219 q2 -9 4 0 m4 0 q2 -12 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
+    <path d="M370 219 q2 -10 4 0 m4 0 q2 -8 4 0 m4 0 q2 -11 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
   </g>
   <!-- tombstone 3: vibe coder -->
   <g v-click="3">
-    <path d="M472 214 L474 64 Q476 18 540 16 Q604 18 606 64 L608 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
-    <text x="540" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-    <text x="540" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Vibe Coder</text>
-    <text x="540" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2025 – 2026</text>
-    <text x="540" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">o código chegou em prod</text>
+    <ellipse cx="540" cy="219" rx="74" ry="5" fill="#191919" opacity="0.08"/>
+    <g transform="rotate(-1.2 540 216)">
+      <path d="M474 218 L473 84 Q472 30 506 21 Q524 16 540 17 Q558 16 576 22 Q607 30 607 84 L606 218 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M488 198 L487 84 Q487 42 512 34" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.3"/>
+      <path d="M482 150 l10 9 l-6 11" fill="none" stroke="#191919" stroke-width="1.5" opacity="0.45"/>
+      <text x="540" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
+      <text x="540" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Vibe Coder</text>
+      <text x="540" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2025 – 2026</text>
+      <text x="540" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">o código chegou em prod</text>
+    </g>
+    <path d="M478 219 q2 -10 4 0 m4 0 q2 -8 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
+    <path d="M592 219 q2 -12 4 0 m4 0 q2 -9 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
   </g>
   <!-- tombstone 4: agents (fresh grave) -->
   <g v-click="4">
-    <path d="M692 214 L694 64 Q696 18 760 16 Q824 18 826 64 L828 214 Z" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="760" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">✝ R.I.P.?</text>
-    <text x="760" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Agents</text>
-    <text x="760" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #B05730">2025 – ???</text>
-    <!-- fresh dirt mound -->
-    <path d="M700 218 Q760 196 820 218 Z" fill="#D4A27F" stroke="#191919" stroke-width="2"/>
+    <ellipse cx="760" cy="219" rx="76" ry="5" fill="#191919" opacity="0.08"/>
+    <g transform="rotate(1.8 760 216)">
+      <path d="M694 218 L693 78 Q692 22 726 16 Q744 12 760 13 Q778 12 796 17 Q827 24 827 78 L826 218 Z" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M708 198 L707 78 Q707 36 732 28" fill="none" stroke="#B05730" stroke-width="1.3" opacity="0.35"/>
+      <text x="760" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">✝ R.I.P.?</text>
+      <text x="760" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Agents</text>
+      <text x="760" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #B05730">2025 – ???</text>
+    </g>
+    <!-- fresh dirt mound (lumpy) -->
+    <path d="M688 220 Q 696 206 712 207 Q 720 198 738 199 Q 756 194 772 200 Q 792 198 802 206 Q 818 207 826 220 Z" fill="#D4A27F" stroke="#191919" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M712 212 q6 -3 11 0 M740 206 q6 -3 11 0 M772 208 q6 -3 11 0" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.5"/>
     <!-- shovel stuck in the dirt -->
-    <line x1="838" y1="148" x2="822" y2="206" stroke="#191919" stroke-width="3"/>
-    <path d="M818 204 Q830 198 836 210 Q828 222 816 214 Z" fill="#4a4a44" stroke="#191919" stroke-width="2"/>
-    <path d="M834 142 q6 -2 8 4 q-2 6 -8 4 Z" fill="none" stroke="#191919" stroke-width="2.5"/>
+    <g transform="rotate(14 845 175)">
+      <rect x="842" y="118" width="5" height="64" rx="2.5" fill="#D4A27F" stroke="#191919" stroke-width="1.8"/>
+      <path d="M836 112 h18 v7 h-6 v6 h-6 v-6 h-6 Z" fill="#D4A27F" stroke="#191919" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M838 182 h13 q3 14 -1 24 Q 845 216 839 206 Q 835 194 838 182 Z" fill="#4a4a44" stroke="#191919" stroke-width="1.8" stroke-linejoin="round"/>
+    </g>
   </g>
 </svg>
 </div>
