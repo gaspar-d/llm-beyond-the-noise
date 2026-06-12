@@ -241,6 +241,18 @@ layout: center
 
 </v-click>
 
+<v-click>
+
+<div class="flex justify-center" style="margin-top: -4px">
+<svg width="820" height="56" viewBox="0 0 820 56">
+  <path d="M14 6 Q 15 22 38 23 L 384 24 Q 408 24 410 38 Q 412 24 436 24 L 782 23 Q 805 22 806 6"
+        fill="none" stroke="#CC785C" stroke-width="3" stroke-linecap="round"/>
+  <text x="410" y="54" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 24px; font-weight: 700">chunk</text>
+</svg>
+</div>
+
+</v-click>
+
 <!--
 Falar a regra ANTES do clique: "os dois estão errados — não ande com eles."
 Clique: e aproveitando que vocês acabaram de ler essas frases... é assim que o MODELO leu.
@@ -251,6 +263,8 @@ Os NÚMEROS são o que o modelo realmente recebe: IDs no vocabulário. Texto é 
 visualização humana. Apontar: "IA" = 7068 nas duas frases (mesmo pedaço, mesmo número,
 sempre). A vírgula = 11. O modelo nunca viu uma letra na vida — só inteiros.
 Tokenização real (o200k, GPT-4o): 9 e 7 tokens. Cores só pra visualizar os cortes.
+Último clique: um grupo de tokens = CHUNK. Guardar o termo — volta no slide de cache
+(o prefixo é hasheado em chunks/blocos) e em todo paper/doc que eles forem ler depois.
 Isso planta a base pro slide seguinte: o modelo só enxerga o mundo nesses pedaços.
 -->
 
@@ -459,39 +473,6 @@ Antecipar a objeção antes que alguém levante a mão.
 Mecânica: o servidor guarda o KV cache do prefixo já processado e reusa se o começo
 do prompt bater byte a byte. Só os tokens novos são processados.
 Anthropic: write 1.25x, read 0.1x, TTL 5min (sliding). 1h opcional a 2x o write.
--->
-
----
-
-<div class="kicker mb-4">parte 1 · cache 101</div>
-
-## O cache pune quem mexe no passado
-
-<div class="mt-6 grid grid-cols-2 gap-8">
-
-<div v-click="1" class="sketch-box danger">
-  <div class="note text-2xl mb-1">✏️ Editou o CLAUDE.md no meio da sessão?</div>
-  <div class="text-lg">Ele fica no <b>topo</b> do prompt. Uma palavra mudada → cache inválido do byte ~0 → próxima request recomputa <b>tudo</b> a preço cheio.</div>
-</div>
-
-<div v-click="2" class="sketch-box olive">
-  <div class="note text-2xl mb-1">📎 Por isso harnesses são append-only</div>
-  <div class="text-lg">Tool results, file reads, suas mensagens: tudo colado <b>no fim</b>. Prefixo intacto, cache hit em toda volta.</div>
-</div>
-
-</div>
-
-<v-click at="3">
-
-<div class="catch mt-10 text-3xl">A linha mais cara do seu dia:<br>um edit no <span class="hl">topo do prompt</span>.</div>
-
-</v-click>
-
-<!--
-Match é por prefixo (hash em blocos), não diff: primeiro byte diferente → recomputa tudo dali em diante.
-Releu um arquivo alterado? Ele é APPENDED de novo (cache sobrevive; contexto incha — escolha seu veneno).
-Compaction/summarization também reescreve o histórico → cache reset.
-Bônus: harness que põe timestamp no topo do system prompt mata o cache em TODA chamada.
 -->
 
 ---
