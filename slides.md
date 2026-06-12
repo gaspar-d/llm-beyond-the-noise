@@ -69,7 +69,8 @@ A talk NÃO é anti-agent. É anti-desperdício.
   <g v-click="2">
     <path d="M252 214 L254 64 Q256 18 320 16 Q384 18 386 64 L388 214 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5"/>
     <text x="320" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-    <text x="320" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Prompt Engineer</text>
+    <text x="320" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Prompt </text>
+    <text x="320" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Engineer</text>
     <text x="320" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2022 – 2024</text>
     <text x="320" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">virou skill de todo mundo</text>
   </g>
@@ -182,6 +183,49 @@ layout: center
 
 <!--
 Posicionamento: não sou evangelista nem hater. Sou o cara da fatura.
+-->
+
+---
+
+<div class="kicker mb-4">parte 1 · primeiro: o que o modelo faz</div>
+
+## O modelo não calcula. Ele estima.
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+
+<div v-click="1" class="sketch-box olive">
+  <div class="font-mono text-base mb-1">🧑 "2 + 2?"<br>🤖 "4"</div>
+  <div class="text-base">✅ Acerta — não porque somou, mas porque viu esse padrão <b>milhões de vezes</b> no treino.</div>
+</div>
+
+<div v-click="2" class="sketch-box danger">
+  <div class="font-mono text-base mb-1">🧑 "9.9 ou 9.11, qual é maior?"<br>🤖 "9.11"</div>
+  <div class="text-base">❌ Erra — ele vê <b>tokens</b>, não números. Aritmética é estimativa aprendida, não execução.</div>
+</div>
+
+</div>
+
+<v-click at="3">
+
+<div class="catch mt-8 text-3xl">Ele estima — com cara de quem calculou.</div>
+
+</v-click>
+
+<v-click at="4">
+
+<div class="note text-2xl text-center mt-4">Tudo que sai do modelo é previsão do próximo token. Guarde essa ideia.</div>
+
+</v-click>
+
+<!--
+Fundação pra TUDO que vem depois: o modelo prevê o próximo token. Só isso.
+Refinamento se alguém questionar: pesquisa de interpretabilidade (Anthropic) mostra
+circuitos internos de ESTIMATIVA — um caminho de magnitude aproximada + um do último
+dígito, em paralelo. Não é lookup de "resposta mais votada", é aproximação aprendida.
+Por isso: acerta 2+2, sobrevive a 3 dígitos, desmorona em 17 × 23 dígitos — com confiança.
+9.9 vs 9.11: tokenização quebra os decimais de um jeito que engana o modelo.
+Gancho: é por isso que agent chama Python pra fazer conta — o modelo decide, a tool computa.
+E é também por isso que a API funciona do jeito que vocês vão ver agora.
 -->
 
 ---
@@ -648,6 +692,51 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 
 ---
 
+<div class="kicker mb-4">parte 3 · o vocabulário do momento</div>
+
+## Modelo, Agent, Harness
+
+<div class="flex justify-center mt-2">
+<svg width="560" height="330" viewBox="0 0 600 360">
+  <!-- harness (outer) -->
+  <g v-click="3">
+    <ellipse cx="300" cy="185" rx="280" ry="168" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" transform="rotate(-1.5 300 185)"/>
+    <text x="300" y="55" text-anchor="middle" style="font-family: Caveat; font-size: 27px; font-weight: 700; fill: #191919">HARNESS</text>
+    <text x="300" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4a4a44">+ contexto · permissões · quando parar</text>
+  </g>
+  <!-- agent (middle) -->
+  <g v-click="2">
+    <ellipse cx="300" cy="210" rx="195" ry="115" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5" transform="rotate(1.2 300 210)"/>
+    <text x="300" y="128" text-anchor="middle" style="font-family: Caveat; font-size: 25px; font-weight: 700; fill: #B05730">AGENT</text>
+    <text x="300" y="151" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4a4a44">+ while loop · tools</text>
+  </g>
+  <!-- model (inner) -->
+  <g v-click="1">
+    <ellipse cx="300" cy="240" rx="112" ry="62" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5" transform="rotate(-2 300 240)"/>
+    <text x="300" y="235" text-anchor="middle" style="font-family: Caveat; font-size: 25px; font-weight: 700; fill: #191919">MODELO</text>
+    <text x="300" y="260" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #4a4a44">prevê o próximo token</text>
+  </g>
+</svg>
+</div>
+
+<v-click at="4">
+
+<div class="catch text-3xl mt-0">O modelo pensa. O agent age.<br>O harness <span class="hl">segura as rédeas</span>.</div>
+
+</v-click>
+
+<!--
+Harness é O termo de 2026 — definir antes que alguém pergunte.
+Harness é literalmente "arreio": o cavalo é forte, mas é o arreio que decide pra onde a força vai.
+Analogia pra sala: kernel vs distro. O loop é o kernel (genérico, extraído nos Agent SDKs —
+Anthropic, OpenAI, Google ADK). O harness é a distro: tools, permissões e defaults pra UM domínio.
+Claude Code = harness de SWE. Claude in Excel = harness de planilha. Sierra/Fin = de suporte.
+Gancho pro fim da parte 3: não reconstrua o harness de código — construa o do SEU domínio.
+E os desastres que vêm aí (Replit, PocketOS): falha de harness (rédea frouxa), não de modelo.
+-->
+
+---
+
 <div class="kicker mb-4">parte 3 · o loop por dentro</div>
 
 ## Cada volta reenvia TUDO de novo
@@ -864,8 +953,58 @@ Sources: <a href="https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-dat
 
 <!--
 Caso real e documentado: Jason Lemkin (SaaStr) testando o agent da Replit por 12 dias.
-Fontes: Fortune, The Register, AI Incident Database #1152.
 Moral: agent com write em prod e sem humano no loop = incidente esperando data.
+Gancho: "2025, ferramenta imatura, a gente aprendeu, né? ... Né?"
+-->
+
+---
+
+<div class="kicker mb-4">parte 3 · 2026: aprendemos? não.</div>
+
+## A reprise de 2026
+
+<div class="mt-2 grid grid-cols-2 gap-4">
+
+<div v-click="1" class="sketch-box danger" style="padding: 0.6rem 1.2rem">
+  <div class="note text-lg mb-1">⏱️ PocketOS · abril/2026</div>
+  <div class="text-sm">Agent do Cursor deletou o DB de produção <b>e os backups</b> em <b>9 segundos</b> — por iniciativa própria, numa tarefa rotineira. Backup recuperável mais recente: <b>3 meses</b>.</div>
+</div>
+
+<div v-click="2" class="sketch-box danger" style="padding: 0.6rem 1.2rem">
+  <div class="note text-lg mb-1">📝 A confissão</div>
+  <div class="text-sm font-mono">"I violated every principle I was given. I guessed instead of verifying."<br><span class="font-sans note text-base">— o agent, no pedido de desculpas que ele mesmo escreveu</span></div>
+</div>
+
+<div v-click="3" class="sketch-box danger" style="padding: 0.6rem 1.2rem">
+  <div class="note text-lg mb-1">🛒 Amazon Kiro · março/2026</div>
+  <div class="text-sm">Duas quedas na loja em uma semana: 6h fora, <b>99% das orders dos EUA perdidas</b> (~6,3M pedidos).</div>
+</div>
+
+<div v-click="4" class="sketch-box danger" style="padding: 0.6rem 1.2rem">
+  <div class="note text-lg mb-1">☁️ Bônus · dezembro/2025</div>
+  <div class="text-sm">Kiro derrubou AWS na China por <b>13 horas</b> ao decidir "deletar e recriar" um ambiente de produção.</div>
+</div>
+
+</div>
+
+<v-click at="5">
+
+<div class="catch mt-4 text-2xl">O problema não é o modelo. É a <span class="hl">chave de prod</span> na mão dele.</div>
+
+</v-click>
+
+<div class="sources">
+Sources: <a href="https://www.fastcompany.com/91533544/cursor-claude-ai-agent-deleted-software-company-pocket-os-database-jer-crane" target="_blank">fastcompany.com (PocketOS)</a> · <a href="https://www.livescience.com/technology/artificial-intelligence/i-violated-every-principle-i-was-given-ai-agent-deletes-companys-entire-database-in-9-seconds-then-confesses" target="_blank">livescience.com</a> · <a href="https://ai-analytics.wharton.upenn.edu/wharton-accountable-ai-lab/governing-ai-agents-what-the-amazon-outage-reveals-about-enterprise-risk/" target="_blank">wharton.upenn.edu (Kiro)</a> · <a href="https://oecd.ai/en/incidents/2026-03-10-01aa" target="_blank">oecd.ai</a>
+</div>
+
+<!--
+PocketOS: agent viu um credential mismatch, achou um token com permissão suficiente,
+"resolveu o obstáculo" deletando o DB. Raciocínio internamente coerente — catastroficamente errado.
+Impacto real: locadoras de carro que usam a plataforma ficaram no escuro.
+Kiro: até fev/2026, 10+ incidentes documentados em 6 ferramentas (Kiro, Replit, Antigravity,
+Claude Code, Cowork, Cursor) atribuídos a agents com boundaries insuficientes.
+Moral pro fechamento: o padrão de todos os casos é ACESSO, não inteligência.
+Guardrails: ambiente isolado, least privilege, human approval pra ação destrutiva.
 -->
 
 ---
@@ -987,9 +1126,10 @@ A justificativa nunca é "é barato" — é o retorno por token.
 
 <div v-click="2" class="sketch-box danger text-xl">❓ "O que é idempotência?" → chat simples (ou um search engine, lembra deles?)</div>
 
-<div v-click="3" class="sketch-box danger text-xl">✏️ Renomear variável → seu IDE faz com F2</div>
+<div v-click="3" class="sketch-box danger text-xl">✏️ Renomear variável → seu IDE faz com F2 <span class="text-base note">(%s/oldterm/newterm/gc <span class="hl"> pra quem for raiz)</span></span> </div>
 
-<div v-click="4" class="sketch-box danger text-xl">🔁 E não crie seu "agent de codar" — os harnesses já existem</div>
+<div v-click="4" class="sketch-box danger text-xl">🔁 E não crie seu "agent de codar" — os harnesses já existem para
+    isso</div>
 
 </div>
 
@@ -1011,7 +1151,7 @@ substituto é o Antigravity CLI (closed source). Enterprise mantém. RIP. 🪦
 
 <div class="kicker mb-4">parte 3 · sub-agents</div>
 
-## Quando o trabalho sujo não cabe no seu contexto
+## Quando o 'trabalho sujo' não cabe no seu contexto
 
 <div class="mt-6 grid grid-cols-3 gap-6">
   <div v-click="1" class="sketch-box">
@@ -1024,13 +1164,13 @@ substituto é o Antigravity CLI (closed source). Enterprise mantém. RIP. 🪦
   </div>
   <div v-click="3" class="sketch-box">
     <div class="note text-2xl mb-1">🤝 Delegação automática</div>
-    <div class="text-lg">O harness delega sozinho pela <code>description</code>. Criar é com você; usar, ele decide.</div>
+    <div class="text-lg">O modelo delega sozinho pela <code>description</code>.<br> Da mesma forma que uma Skill.</div>
   </div>
 </div>
 
 <v-click at="4">
 
-<div class="catch mt-10 text-3xl">Spinning é automático. <span class="hl">Criar é com você.</span></div>
+<div class="catch mt-10 text-3xl">O disparo é automático. <span class="hl">Criar é com você.</span></div>
 
 </v-click>
 
