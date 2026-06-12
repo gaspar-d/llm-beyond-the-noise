@@ -187,6 +187,29 @@
   line-height: 1;
 }
 
+/* Tokenized text chips */
+.tokrow > span {
+  display: inline-block;
+  white-space: pre;
+  border-radius: 4px;
+  padding: 0 4px;
+  margin: 1px;
+  color: #8a4a28;
+  text-align: center;
+  line-height: 1.3;
+  vertical-align: top;
+}
+
+.tokrow > span small {
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+.tokrow > span:nth-child(4n+1) { background: #f7e8e1; }
+.tokrow > span:nth-child(4n+2) { background: #eef0e7; }
+.tokrow > span:nth-child(4n+3) { background: #e8eef5; }
+.tokrow > span:nth-child(4n) { background: #f3e8da; }
+
 /* Sources footer */
 .sources {
   position: absolute;

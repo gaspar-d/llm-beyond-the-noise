@@ -153,46 +153,57 @@ layout: center
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">1️⃣ &nbsp;Como a API funciona por baixo <span class="note text-xl">(e por que sua fatura já sabe)</span></div>
+<div class="sketch-box mb-4 text-xl">1️⃣ &nbsp;Como funciona por baixo — tokens, a API sem memória, e por que sua fatura já sabe</div>
 
 </v-click>
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;CLAUDE.md vs Skills — contexto custa caro</div>
+<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;Skills — lazy loading e o CLAUDE.md em dieta</div>
 
 </v-click>
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">3️⃣ &nbsp;Agents: while loops com cartão de crédito</div>
+<div class="sketch-box mb-4 text-xl">3️⃣ &nbsp;Agents — while loops com cartão de crédito <span class="note text-xl">(tem DB de produção deletado)</span></div>
 
 </v-click>
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">4️⃣ &nbsp;Desastres reais <span class="note text-xl">(tem DB de produção deletado)</span></div>
-
-</v-click>
-
-<v-click>
-
-<div class="sketch-box text-xl">5️⃣ &nbsp;Personas: por que o cosplay deixa o modelo mais burro</div>
+<div class="sketch-box text-xl">4️⃣ &nbsp;Personas — por que o cosplay deixa o modelo mais burro</div>
 
 </v-click>
 
 </div>
 
 <!--
-Revelar um por um, com uma frase de gancho pra cada.
-No item 4, segurar o suspense: "sim, deletado. Sim, produção. Já chegamos lá."
+Revelar um por um, com uma frase de gancho pra cada. Os 4 itens = os 4 divisores de parte.
+No item 3, segurar o suspense do parêntese: "sim, deletado. Sim, produção. Já chegamos lá."
 -->
 
 ---
 layout: center
 ---
 
-<div class="kicker text-center mb-8">a regra do 8 ou 80</div>
+<svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
+  <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(-4 60 60)"/>
+  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">1</text>
+</svg>
+
+<div class="catch text-6xl text-center">Como funciona por baixo</div>
+
+<div class="note text-2xl text-center mt-6">spoiler: é tudo previsão de token</div>
+
+<!--
+Divisor de capítulo. Respira. 3 segundos e segue.
+-->
+
+---
+layout: center
+---
+
+<div class="kicker text-center mb-8">parte 1 · a regra dos 8 ou 80 (Tokens)</div>
 
 <div class="grid grid-cols-2 gap-8">
   <div class="sketch-box clay text-center">
@@ -207,12 +218,25 @@ layout: center
 
 <v-click>
 
-<div class="catch mt-10 text-3xl">Os dois estão errados. Não ande com eles!</div>
+<div class="sketch-box mt-8 mx-auto" style="max-width: 840px">
+  <div class="note text-xl mb-2">O que vocês leram ☝️ — do jeito que o modelo lê:</div>
+  <div class="font-mono text-base mb-2 tokrow"><span>IA<br><small>7068</small></span><span> resolve<br><small>14062</small></span><span> tudo<br><small>17409</small></span><span>,<br><small>11</small></span><span> podem<br><small>20299</small></span><span> dem<br><small>2019</small></span><span>itir<br><small>101542</small></span><span> todo<br><small>6520</small></span><span> mundo<br><small>10225</small></span> <span class="note text-lg" style="background: none; color: #4a4a44">→ 9 tokens</span></div>
+  <div class="font-mono text-base tokrow"><span>IA<br><small>7068</small></span><span> é<br><small>1212</small></span><span> hype<br><small>75716</small></span><span>,<br><small>11</small></span><span> isso<br><small>11922</small></span><span> vai<br><small>12156</small></span><span> passar<br><small>37952</small></span> <span class="note text-lg" style="background: none; color: #4a4a44">→ 7 tokens</span></div>
+</div>
 
 </v-click>
 
 <!--
-Posicionamento: não sou evangelista nem hater. Sou o cara da fatura.
+Falar a regra ANTES do clique: "os dois estão errados — não ande com eles."
+Clique: e aproveitando que vocês acabaram de ler essas frases... é assim que o MODELO leu.
+Definir token aqui de forma natural: pedaço de palavra, ~4 caracteres.
+Apontar o "demitir" → " dem" + "itir": palavra menos comum = mais pedaços.
+"IA", "é", "hype" = 1 token cada (padrões frequentes).
+Os NÚMEROS são o que o modelo realmente recebe: IDs no vocabulário. Texto é só a
+visualização humana. Apontar: "IA" = 7068 nas duas frases (mesmo pedaço, mesmo número,
+sempre). A vírgula = 11. O modelo nunca viu uma letra na vida — só inteiros.
+Tokenização real (o200k, GPT-4o): 9 e 7 tokens. Cores só pra visualizar os cortes.
+Isso planta a base pro slide seguinte: o modelo só enxerga o mundo nesses pedaços.
 -->
 
 ---
@@ -248,6 +272,7 @@ Posicionamento: não sou evangelista nem hater. Sou o cara da fatura.
 </v-click>
 
 <!--
+Token já foi definido no slide anterior (chips coloridos) — só retomar: "lembra dos pedaços?"
 Fundação pra TUDO que vem depois: o modelo prevê o próximo token. Só isso.
 Refinamento se alguém questionar: pesquisa de interpretabilidade (Anthropic) mostra
 circuitos internos de ESTIMATIVA — um caminho de magnitude aproximada + um do último
@@ -255,6 +280,56 @@ dígito, em paralelo. Não é lookup de "resposta mais votada", é aproximação
 Por isso: acerta 2+2, sobrevive a 3 dígitos, desmorona em 17 × 23 dígitos — com confiança.
 9.9 vs 9.11: tokenização quebra os decimais de um jeito que engana o modelo.
 Gancho: é por isso que agent chama Python pra fazer conta — o modelo decide, a tool computa.
+Gancho pro próximo slide: "tá, mas COMO ele escolhe o '4'?"
+-->
+
+---
+
+<div class="kicker mb-4">parte 1 · por dentro da estimativa</div>
+
+## Como ele escolhe o "4"
+
+<div class="mt-6 grid grid-cols-2 gap-8 items-start">
+
+<div v-click="1" class="sketch-box">
+  <div class="note text-xl mb-2">A lista de candidatos a próximo token</div>
+  <div class="font-mono text-sm">
+    <div class="flex items-center gap-3 mb-1"><span style="width: 56px">"4"</span><div style="height: 12px; width: 250px; background: #788C5D; border: 1.5px solid #191919; border-radius: 3px"></div><span>99,2%</span></div>
+    <div class="flex items-center gap-3 mb-1"><span style="width: 56px">"3"</span><div style="height: 12px; width: 5px; background: #BF4D43; border: 1.5px solid #191919; border-radius: 3px"></div><span>0,3%</span></div>
+    <div class="flex items-center gap-3 mb-1"><span style="width: 56px">"5"</span><div style="height: 12px; width: 4px; background: #BF4D43; border: 1.5px solid #191919; border-radius: 3px"></div><span>0,2%</span></div>
+    <div class="flex items-center gap-3"><span style="width: 56px">"🍕"</span><div style="height: 12px; width: 2px; background: #BF4D43; border: 1.5px solid #191919; border-radius: 3px"></div><span>0,0001%</span></div>
+  </div>
+  <div class="note text-base mt-2">Toda resposta é um sorteio nessa lista.</div>
+</div>
+
+<div v-click="2" class="sketch-box clay">
+  <div class="note text-xl mb-2">🌡️ temperature: quem controla o sorteio</div>
+  <svg width="380" height="46" viewBox="0 0 380 46">
+    <path d="M20 24 Q 190 19, 360 24" fill="none" stroke="#191919" stroke-width="2.5"/>
+    <circle cx="42" cy="23" r="9" fill="#788C5D" stroke="#191919" stroke-width="2"/>
+    <circle cx="338" cy="24" r="9" fill="#B05730" stroke="#191919" stroke-width="2"/>
+    <text x="42" y="44" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #5C7547">0</text>
+    <text x="338" y="44" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #B05730">1</text>
+  </svg>
+  <div class="text-sm mt-1"><b>0 → lógico:</b> sempre o topo da lista. Código, fatos, infra.</div>
+  <div class="text-sm mt-1"><b>1 → criativo:</b> espalha as chances. Brainstorm, texto.</div>
+</div>
+
+</div>
+
+<v-click at="3">
+
+<div class="catch mt-8 text-3xl">Temperature controla o <span class="hl">chute</span>,<br>não a inteligência.</div>
+
+</v-click>
+
+<!--
+Distribuição: cada token de saída vem de uma lista de candidatos com probabilidades (softmax).
+Temperature reescala essa lista: 0 ≈ greedy (sempre o topo, quase determinístico);
+alta = espalha a probabilidade entre os candidatos (criatividade = aleatoriedade controlada).
+Nuance se perguntarem: temp 0 não é 100% determinístico na prática (floating point, MoE routing).
+Uso prático: código/fatos/automação → temp baixa; brainstorm/copy → temp alta.
+Liga com a parte 4 (personas): constraint "Temperature: 0" vale mais que "você é um expert".
 E é também por isso que a API funciona do jeito que vocês vão ver agora.
 -->
 
@@ -425,7 +500,8 @@ Bônus: harness que põe timestamp no topo do system prompt mata o cache em TODA
 
 <div>
   <div class="stat">3–7k</div>
-  <div class="stat-label mb-6">tokens por interação</div>
+  <div class="stat-label mb-1">tokens por interação</div>
+  <div class="note text-base mb-5" style="color: #4a4a44">ocupando o <b>context window</b> — o espaço finito de atenção do modelo</div>
   <v-click>
     <div class="note text-2xl">Enviado <b>sempre</b>.<br>Mesmo quando você só pediu<br>um <code>console.log</code>.</div>
   </v-click>
@@ -471,7 +547,9 @@ Gancho: "e se só carregasse quando precisa?" → Skills.
 
 ## The book is on the table
 
-<div class="note text-xl mb-4">O mesmo prompt de code review em <span class="hl">inglês</span> vs <span class="hl">português</span>, a mesma informação:</div>
+<div class="note text-xl mb-1">O mesmo prompt de code review em <span class="hl">inglês</span> vs <span class="hl">português</span>, a mesma informação:</div>
+
+<div class="note text-base mb-3" style="color: #4a4a44">(o200k e cl100k são <b>tokenizers</b> — os dicionários que picam o texto em tokens; o número é o tamanho do dicionário)</div>
 
 <div class="mb-3">
   <div class="flex items-center gap-4">
@@ -521,6 +599,24 @@ português fragmenta mais (acentos, palavras longas).
 Bônus que ninguém lembra: a RESPOSTA em português também custa mais — e output é ~5x o preço do input.
 Honestidade: tokenizers novos encolhem o gap (o200k 18% vs cl100k 36%). Tendência é melhorar.
 Cabrita (arXiv): tokenizer otimizado pra PT corta >35% dos tokens — prova o tamanho da penalidade.
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
+  <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(3 60 60)"/>
+  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">2</text>
+</svg>
+
+<div class="catch text-6xl text-center">Skills</div>
+
+<div class="note text-2xl text-center mt-6">lazy loading pra gente preguiçosa (é elogio)</div>
+
+<!--
+Divisor de capítulo.
 -->
 
 ---
@@ -687,37 +783,17 @@ layout: center
 class: text-center
 ---
 
-<div class="kicker mb-6">parte 3 · agents</div>
+<svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
+  <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(-2 60 60)"/>
+  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">3</text>
+</svg>
 
-<div class="catch">Agent é um <span class="hl sketch-under">while loop</span>.</div>
+<div class="catch text-6xl text-center">Agents</div>
 
-<v-click>
-
-<div class="mt-10 text-left mx-auto" style="max-width: 720px">
-
-```javascript
-while (!done) {
-  think();
-  callTool();
-  appendToContext();
-  pay()// 💸
-}
-```
-
-</div>
-
-</v-click>
-
-<v-click>
-
-<div class="catch-sub mt-8">Um while loop com cartão de crédito.</div>
-
-</v-click>
+<div class="note text-2xl text-center mt-6">while loops com cartão de crédito</div>
 
 <!--
-Desmistificar: agent = modelo + tools num loop agir/observar.
-model → tool call → resultado volta pro contexto → model de novo. Até terminar.
-Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
+Divisor de capítulo. A parte mais longa da talk.
 -->
 
 ---
@@ -763,6 +839,117 @@ Anthropic, OpenAI, Google ADK). O harness é a distro: tools, permissões e defa
 Claude Code = harness de SWE. Claude in Excel = harness de planilha. Sierra/Fin = de suporte.
 Gancho pro fim da parte 3: não reconstrua o harness de código — construa o do SEU domínio.
 E os desastres que vêm aí (Replit, PocketOS): falha de harness (rédea frouxa), não de modelo.
+Gancho pro próximo: "vamos abrir o anel do meio: o que é esse loop?"
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<div class="kicker mb-6">parte 3 · agents</div>
+
+<div class="catch">Agent é um <span class="hl sketch-under">while loop</span>.</div>
+
+<v-click>
+
+<div class="mt-10 text-left mx-auto" style="max-width: 720px">
+
+```javascript
+while (!done) {
+  think();
+  callTool();
+  appendToContext();
+  pay()// 💸
+}
+```
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="catch-sub mt-8">Um while loop com cartão de crédito.</div>
+
+</v-click>
+
+<!--
+Desmistificar: agent = modelo + tools num loop agir/observar.
+model → tool call → resultado volta pro contexto → model de novo. Até terminar.
+Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
+-->
+
+---
+
+<div class="kicker mb-4">parte 3 · mais vocabulário</div>
+
+## Loop · Sub-agent · A2A
+
+<div class="mt-4 grid grid-cols-3 gap-8 text-center">
+
+<div v-click="1">
+  <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
+    <rect x="20" y="50" width="80" height="46" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
+    <text x="60" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">agent</text>
+    <rect x="145" y="50" width="76" height="46" rx="12" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
+    <text x="183" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #5C7547">tools</text>
+    <path d="M102 56 C 115 38, 130 38, 143 54" fill="none" stroke="#788C5D" stroke-width="2.5" marker-end="url(#taxG)"/>
+    <path d="M143 92 C 130 110, 115 110, 102 94" fill="none" stroke="#788C5D" stroke-width="2.5" marker-end="url(#taxG)"/>
+    <defs><marker id="taxG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#788C5D" stroke-width="1.8"/></marker></defs>
+  </svg>
+  <div class="note text-xl mt-1">Agent Loop</div>
+  <div class="text-sm">Um agent e suas tools.<br>Um contexto que <b>só cresce</b>.</div>
+</div>
+
+<div v-click="2">
+  <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
+    <rect x="75" y="12" width="90" height="42" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
+    <text x="120" y="39" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">agent</text>
+    <rect x="84" y="96" width="72" height="38" rx="10" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
+    <text x="120" y="121" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #5C7547">sub-agent</text>
+    <path d="M104 56 C 98 70, 98 80, 104 93" fill="none" stroke="#B05730" stroke-width="2.5" marker-end="url(#taxC)"/>
+    <text x="78" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 15px; fill: #B05730">brief</text>
+    <path d="M136 93 C 142 80, 142 70, 136 57" fill="none" stroke="#788C5D" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#taxG)"/>
+    <text x="166" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 15px; fill: #5C7547">report</text>
+    <defs><marker id="taxC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#B05730" stroke-width="1.8"/></marker></defs>
+  </svg>
+  <div class="note text-xl mt-1">Sub-agent</div>
+  <div class="text-sm">Estagiário <b>descartável</b>: brief entra,<br>report sai, contexto morre.</div>
+</div>
+
+<div v-click="3">
+  <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
+    <rect x="14" y="50" width="92" height="46" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
+    <text x="60" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #B05730">agent A</text>
+    <rect x="134" y="50" width="92" height="46" rx="12" fill="#e8eef5" stroke="#4E7CA8" stroke-width="2.5"/>
+    <text x="180" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4E7CA8">agent B</text>
+    <path d="M108 62 L 130 62" fill="none" stroke="#B05730" stroke-width="2.5" marker-end="url(#taxC)"/>
+    <path d="M132 84 L 110 84" fill="none" stroke="#4E7CA8" stroke-width="2.5" marker-end="url(#taxB)"/>
+    <defs><marker id="taxB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#4E7CA8" stroke-width="1.8"/></marker></defs>
+  </svg>
+  <div class="note text-xl mt-1">Agent-to-Agent</div>
+  <div class="text-sm">Dois <b>peers</b> independentes.<br>Dois loops, dois harnesses.</div>
+</div>
+
+</div>
+
+<v-click at="4">
+
+<div class="catch mt-8 text-2xl">Loop: um agent e suas tools. Sub-agent: estagiário descartável.<br>A2A: dois agents — e <span class="hl">duas faturas</span>.</div>
+
+</v-click>
+
+<!--
+Loop: já visto — um "mente", tools burras, contexto único que só cresce.
+Sub-agent: hierarquia pai-filho. Comunicação acontece exatamente DUAS vezes: brief entra,
+report sai. Contexto fresco, descartado no fim. Mesmo harness, mesma sessão.
+A2A: pares independentes — cada um com loop, harness e dono próprios (até empresas
+diferentes). Protocolo do momento: A2A do Google. Ninguém spawna ninguém; os dois
+continuam existindo depois da conversa.
+Lente de custo: loop = uma fatura que cresce; sub-agent = fatura paralela picotada no fim;
+A2A = duas faturas, dois donos — e a pergunta divertida: quem paga quando os dois
+resolvem conversar por uma hora?
 -->
 
 ---
@@ -1209,6 +1396,24 @@ Formato do arquivo é quase igual ao de uma Skill (markdown + frontmatter).
 Claude Code, Cursor 2.4+ e OpenCode: todos delegam proativamente pela description.
 "use proactively" na description aumenta a chance de delegação automática.
 O que NENHUM faz: definir um tipo novo de sub-agent sozinho.
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
+  <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(4 60 60)"/>
+  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">4</text>
+</svg>
+
+<div class="catch text-6xl text-center">Personas</div>
+
+<div class="note text-2xl text-center mt-6">o fim do cosplay</div>
+
+<!--
+Divisor de capítulo. Último ato.
 -->
 
 ---
