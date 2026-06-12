@@ -235,3 +235,57 @@
   text-decoration-thickness: 3px;
   opacity: 0.6;
 }
+
+/* =========================================
+   NATIVE DARK MODE (toggle with 'd')
+   ========================================= */
+
+html.dark {
+  --ivory: #1e1d1a;
+  --paper: #2a2925;
+  --ink: #ece9df;
+  --ink-soft: #b3afa3;
+  --clay: #d98c64;
+  --clay-dark: #d99068;
+  --kraft: #b08a5e;
+  --olive: #93a878;
+  --sky: #85aed1;
+  --danger: #d97a70;
+}
+
+/* Box variants (literal hexes in light mode) */
+html.dark .sketch-box.clay { background: #3b2f27; border-color: #d99068; }
+html.dark .sketch-box.olive { background: #2e342b; border-color: #93a878; }
+html.dark .sketch-box.danger { background: #3a2a27; border-color: #d97a70; }
+html.dark .sketch-box.security { background: #2a2925; border-color: #b3afa3; }
+
+/* Token chips */
+html.dark .tokrow > span { color: #e8b48f; }
+html.dark .tokrow > span:nth-child(4n+1) { background: #3b2f27; }
+html.dark .tokrow > span:nth-child(4n+2) { background: #2e342b; }
+html.dark .tokrow > span:nth-child(4n+3) { background: #272f3a; }
+html.dark .tokrow > span:nth-child(4n) { background: #3a3225; }
+
+/* SVG shape fills (light pastels -> dark equivalents) */
+html.dark .slidev-layout svg [fill="#EFEDE6"],
+html.dark .slidev-layout svg [fill="#F5F4EF"] { fill: #2f2d28; }
+html.dark .slidev-layout svg [fill="#f7e8e1"] { fill: #3b2f27; }
+html.dark .slidev-layout svg [fill="#eef0e7"] { fill: #2e342b; }
+html.dark .slidev-layout svg [fill="#e8eef5"] { fill: #272f3a; }
+html.dark .slidev-layout svg [fill="#f8e9e7"] { fill: #3a2a27; }
+html.dark .slidev-layout svg [fill="#D4A27F"] { fill: #8a6b48; }
+
+/* SVG strokes */
+html.dark .slidev-layout svg [stroke="#191919"] { stroke: #c9c5b9; }
+
+/* SVG text fills (converted to attributes) */
+html.dark .slidev-layout svg text[fill="#191919"] { fill: #ece9df; }
+html.dark .slidev-layout svg text[fill="#4a4a44"] { fill: #b3afa3; }
+html.dark .slidev-layout svg text[fill="#788C5D"],
+html.dark .slidev-layout svg text[fill="#5C7547"] { fill: #a3b98a; }
+html.dark .slidev-layout svg text[fill="#B05730"] { fill: #d99068; }
+html.dark .slidev-layout svg text[fill="#4E7CA8"] { fill: #85aed1; }
+html.dark .slidev-layout svg text[fill="#BF4D43"] { fill: #de8077; }
+
+/* Tombstone shadows: keep them dark, not glowing */
+html.dark .slidev-layout svg ellipse[fill="#191919"] { fill: #000000; }

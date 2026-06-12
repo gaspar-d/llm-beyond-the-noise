@@ -10,7 +10,7 @@ drawings:
   persist: false
 transition: fade
 mdc: true
-colorSchema: light
+colorSchema: auto
 fonts:
   sans: Space Grotesk
   mono: JetBrains Mono
@@ -66,11 +66,11 @@ A talk NÃO é anti-agent. É anti-desperdício.
       <path d="M34 218 L33 80 Q32 24 64 18 Q82 14 100 15 Q120 14 138 19 Q167 26 167 80 L166 218 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
       <path d="M48 200 L47 78 Q47 38 74 31" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.3"/>
       <path d="M132 36 l9 11 l-7 9" fill="none" stroke="#191919" stroke-width="1.5" opacity="0.45"/>
-      <text x="100" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-      <text x="100" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Ghost</text>
-      <text x="100" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Autocomplete</text>
-      <text x="100" y="156" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2021 – 2023</text>
-      <text x="100" y="186" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">morto pelo chat</text>
+      <text x="100" y="52" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 20px">✝ R.I.P.</text>
+      <text x="100" y="98" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 23px">Ghost</text>
+      <text x="100" y="124" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 23px">Autocomplete</text>
+      <text x="100" y="156" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 19px">2021 – 2023</text>
+      <text x="100" y="186" text-anchor="middle" fill="#788C5D" style="font-family: Caveat; font-size: 16px">morto pelo chat</text>
     </g>
     <path d="M38 219 q2 -10 4 0 m4 0 q2 -12 4 0 m4 0 q2 -8 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
     <path d="M150 219 q2 -11 4 0 m4 0 q2 -8 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
@@ -81,11 +81,11 @@ A talk NÃO é anti-agent. É anti-desperdício.
     <g transform="rotate(1.5 320 216)">
       <path d="M254 218 L255 92 L266 88 L267 56 Q268 26 296 22 Q320 18 344 22 Q372 26 373 56 L374 88 L385 92 L386 218 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
       <path d="M270 200 L270 96" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.3"/>
-      <text x="320" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-      <text x="320" y="98" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Prompt </text>
-      <text x="320" y="124" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Engineer</text>
-      <text x="320" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2022 – 2024</text>
-      <text x="320" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">virou skill de todo mundo</text>
+      <text x="320" y="52" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 20px">✝ R.I.P.</text>
+      <text x="320" y="98" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 23px">Prompt </text>
+      <text x="320" y="124" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 23px">Engineer</text>
+      <text x="320" y="150" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 19px">2022 – 2024</text>
+      <text x="320" y="182" text-anchor="middle" fill="#788C5D" style="font-family: Caveat; font-size: 16px">virou skill de todo mundo</text>
     </g>
     <path d="M260 219 q2 -9 4 0 m4 0 q2 -12 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
     <path d="M370 219 q2 -10 4 0 m4 0 q2 -8 4 0 m4 0 q2 -11 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
@@ -97,10 +97,10 @@ A talk NÃO é anti-agent. É anti-desperdício.
       <path d="M474 218 L473 84 Q472 30 506 21 Q524 16 540 17 Q558 16 576 22 Q607 30 607 84 L606 218 Z" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" stroke-linejoin="round"/>
       <path d="M488 198 L487 84 Q487 42 512 34" fill="none" stroke="#191919" stroke-width="1.3" opacity="0.3"/>
       <path d="M482 150 l10 9 l-6 11" fill="none" stroke="#191919" stroke-width="1.5" opacity="0.45"/>
-      <text x="540" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #4a4a44">✝ R.I.P.</text>
-      <text x="540" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Vibe Coder</text>
-      <text x="540" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4a4a44">2025 – 2026</text>
-      <text x="540" y="182" text-anchor="middle" style="font-family: Caveat; font-size: 16px; fill: #788C5D">o código chegou em prod</text>
+      <text x="540" y="52" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 20px">✝ R.I.P.</text>
+      <text x="540" y="110" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 23px">Vibe Coder</text>
+      <text x="540" y="150" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 19px">2025 – 2026</text>
+      <text x="540" y="182" text-anchor="middle" fill="#788C5D" style="font-family: Caveat; font-size: 16px">o código chegou em prod</text>
     </g>
     <path d="M478 219 q2 -10 4 0 m4 0 q2 -8 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
     <path d="M592 219 q2 -12 4 0 m4 0 q2 -9 4 0" fill="none" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
@@ -111,9 +111,9 @@ A talk NÃO é anti-agent. É anti-desperdício.
     <g transform="rotate(1.8 760 216)">
       <path d="M694 218 L693 78 Q692 22 726 16 Q744 12 760 13 Q778 12 796 17 Q827 24 827 78 L826 218 Z" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5" stroke-linejoin="round"/>
       <path d="M708 198 L707 78 Q707 36 732 28" fill="none" stroke="#B05730" stroke-width="1.3" opacity="0.35"/>
-      <text x="760" y="52" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">✝ R.I.P.?</text>
-      <text x="760" y="110" text-anchor="middle" style="font-family: Caveat; font-size: 23px; fill: #191919">Agents</text>
-      <text x="760" y="150" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #B05730">2025 – ???</text>
+      <text x="760" y="52" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 20px">✝ R.I.P.?</text>
+      <text x="760" y="110" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 23px">Agents</text>
+      <text x="760" y="150" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 22px">2025 – ???</text>
     </g>
     <!-- fresh dirt mound (lumpy) -->
     <path d="M688 220 Q 696 206 712 207 Q 720 198 738 199 Q 756 194 772 200 Q 792 198 802 206 Q 818 207 826 220 Z" fill="#D4A27F" stroke="#191919" stroke-width="2" stroke-linejoin="round"/>
@@ -188,7 +188,7 @@ layout: center
 
 <svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
   <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(-4 60 60)"/>
-  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">1</text>
+  <text x="60" y="85" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 72px; font-weight: 700">1</text>
 </svg>
 
 <div class="catch text-6xl text-center">Como funciona por baixo</div>
@@ -220,8 +220,8 @@ layout: center
 
 <div class="sketch-box mt-8 mx-auto" style="max-width: 840px">
   <div class="note text-xl mb-2">O que vocês leram ☝️ — do jeito que o modelo lê:</div>
-  <div class="font-mono text-base mb-2 tokrow"><span>IA<br><small>7068</small></span><span> resolve<br><small>14062</small></span><span> tudo<br><small>17409</small></span><span>,<br><small>11</small></span><span> podem<br><small>20299</small></span><span> dem<br><small>2019</small></span><span>itir<br><small>101542</small></span><span> todo<br><small>6520</small></span><span> mundo<br><small>10225</small></span> <span class="note text-lg" style="background: none; color: #4a4a44">→ 9 tokens</span></div>
-  <div class="font-mono text-base tokrow"><span>IA<br><small>7068</small></span><span> é<br><small>1212</small></span><span> hype<br><small>75716</small></span><span>,<br><small>11</small></span><span> isso<br><small>11922</small></span><span> vai<br><small>12156</small></span><span> passar<br><small>37952</small></span> <span class="note text-lg" style="background: none; color: #4a4a44">→ 7 tokens</span></div>
+  <div class="font-mono text-base mb-2 tokrow"><span>IA<br><small>7068</small></span><span> resolve<br><small>14062</small></span><span> tudo<br><small>17409</small></span><span>,<br><small>11</small></span><span> podem<br><small>20299</small></span><span> dem<br><small>2019</small></span><span>itir<br><small>101542</small></span><span> todo<br><small>6520</small></span><span> mundo<br><small>10225</small></span> <span class="note text-lg" style="background: none">→ 9 tokens</span></div>
+  <div class="font-mono text-base tokrow"><span>IA<br><small>7068</small></span><span> é<br><small>1212</small></span><span> hype<br><small>75716</small></span><span>,<br><small>11</small></span><span> isso<br><small>11922</small></span><span> vai<br><small>12156</small></span><span> passar<br><small>37952</small></span> <span class="note text-lg" style="background: none">→ 7 tokens</span></div>
 </div>
 
 </v-click>
@@ -308,8 +308,8 @@ Gancho pro próximo slide: "tá, mas COMO ele escolhe o '4'?"
     <path d="M20 24 Q 190 19, 360 24" fill="none" stroke="#191919" stroke-width="2.5"/>
     <circle cx="42" cy="23" r="9" fill="#788C5D" stroke="#191919" stroke-width="2"/>
     <circle cx="338" cy="24" r="9" fill="#B05730" stroke="#191919" stroke-width="2"/>
-    <text x="42" y="44" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #5C7547">0</text>
-    <text x="338" y="44" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #B05730">1</text>
+    <text x="42" y="44" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 17px">0</text>
+    <text x="338" y="44" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 17px">1</text>
   </svg>
   <div class="text-sm mt-1"><b>0 → lógico:</b> sempre o topo da lista. Código, fatos, infra.</div>
   <div class="text-sm mt-1"><b>1 → criativo:</b> espalha as chances. Brainstorm, texto.</div>
@@ -501,7 +501,7 @@ Bônus: harness que põe timestamp no topo do system prompt mata o cache em TODA
 <div>
   <div class="stat">3–7k</div>
   <div class="stat-label mb-1">tokens por interação</div>
-  <div class="note text-base mb-5" style="color: #4a4a44">ocupando o <b>context window</b> — o espaço finito de atenção do modelo</div>
+  <div class="note text-base mb-5">ocupando o <b>context window</b> — o espaço finito de atenção do modelo</div>
   <v-click>
     <div class="note text-2xl">Enviado <b>sempre</b>.<br>Mesmo quando você só pediu<br>um <code>console.log</code>.</div>
   </v-click>
@@ -549,7 +549,7 @@ Gancho: "e se só carregasse quando precisa?" → Skills.
 
 <div class="note text-xl mb-1">O mesmo prompt de code review em <span class="hl">inglês</span> vs <span class="hl">português</span>, a mesma informação:</div>
 
-<div class="note text-base mb-3" style="color: #4a4a44">(o200k e cl100k são <b>tokenizers</b> — os dicionários que picam o texto em tokens; o número é o tamanho do dicionário)</div>
+<div class="note text-base mb-3">(o200k e cl100k são <b>tokenizers</b> — os dicionários que picam o texto em tokens; o número é o tamanho do dicionário)</div>
 
 <div class="mb-3">
   <div class="flex items-center gap-4">
@@ -608,7 +608,7 @@ class: text-center
 
 <svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
   <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(3 60 60)"/>
-  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">2</text>
+  <text x="60" y="85" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 72px; font-weight: 700">2</text>
 </svg>
 
 <div class="catch text-6xl text-center">Skills</div>
@@ -785,7 +785,7 @@ class: text-center
 
 <svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
   <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(-2 60 60)"/>
-  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">3</text>
+  <text x="60" y="85" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 72px; font-weight: 700">3</text>
 </svg>
 
 <div class="catch text-6xl text-center">Agents</div>
@@ -807,20 +807,20 @@ Divisor de capítulo. A parte mais longa da talk.
   <!-- harness (outer) -->
   <g v-click="3">
     <ellipse cx="300" cy="185" rx="280" ry="168" fill="#EFEDE6" stroke="#4E7CA8" stroke-width="2.5" transform="rotate(-1.5 300 185)"/>
-    <text x="300" y="55" text-anchor="middle" style="font-family: Caveat; font-size: 27px; font-weight: 700; fill: #4E7CA8">HARNESS</text>
-    <text x="300" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4E7CA8">+ contexto · permissões · quando parar</text>
+    <text x="300" y="55" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 27px; font-weight: 700">HARNESS</text>
+    <text x="300" y="80" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 18px">+ contexto · permissões · quando parar</text>
   </g>
   <!-- agent (middle) -->
   <g v-click="2">
     <ellipse cx="300" cy="210" rx="195" ry="115" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5" transform="rotate(1.2 300 210)"/>
-    <text x="300" y="128" text-anchor="middle" style="font-family: Caveat; font-size: 25px; font-weight: 700; fill: #B05730">AGENT</text>
-    <text x="300" y="151" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4a4a44">+ while loop · tools</text>
+    <text x="300" y="128" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 25px; font-weight: 700">AGENT</text>
+    <text x="300" y="151" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 18px">+ while loop · tools</text>
   </g>
   <!-- model (inner) -->
   <g v-click="1">
     <ellipse cx="300" cy="240" rx="112" ry="62" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5" transform="rotate(-2 300 240)"/>
-    <text x="300" y="235" text-anchor="middle" style="font-family: Caveat; font-size: 25px; font-weight: 700; fill: #5C7547">MODELO</text>
-    <text x="300" y="260" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #5C7547">prevê o próximo token</text>
+    <text x="300" y="235" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 25px; font-weight: 700">MODELO</text>
+    <text x="300" y="260" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 17px">prevê o próximo token</text>
   </g>
 </svg>
 </div>
@@ -891,9 +891,9 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 <div v-click="1">
   <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
     <rect x="20" y="50" width="80" height="46" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="60" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">agent</text>
+    <text x="60" y="79" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 20px">agent</text>
     <rect x="145" y="50" width="76" height="46" rx="12" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
-    <text x="183" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #5C7547">tools</text>
+    <text x="183" y="79" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 20px">tools</text>
     <path d="M102 56 C 115 38, 130 38, 143 54" fill="none" stroke="#788C5D" stroke-width="2.5" marker-end="url(#taxG)"/>
     <path d="M143 92 C 130 110, 115 110, 102 94" fill="none" stroke="#788C5D" stroke-width="2.5" marker-end="url(#taxG)"/>
     <defs><marker id="taxG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#788C5D" stroke-width="1.8"/></marker></defs>
@@ -905,13 +905,13 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 <div v-click="2">
   <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
     <rect x="75" y="12" width="90" height="42" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="120" y="39" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #B05730">agent</text>
+    <text x="120" y="39" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 20px">agent</text>
     <rect x="84" y="96" width="72" height="38" rx="10" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
-    <text x="120" y="121" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #5C7547">sub-agent</text>
+    <text x="120" y="121" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 18px">sub-agent</text>
     <path d="M104 56 C 98 70, 98 80, 104 93" fill="none" stroke="#B05730" stroke-width="2.5" marker-end="url(#taxC)"/>
-    <text x="78" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 15px; fill: #B05730">brief</text>
+    <text x="78" y="80" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 15px">brief</text>
     <path d="M136 93 C 142 80, 142 70, 136 57" fill="none" stroke="#788C5D" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#taxG)"/>
-    <text x="166" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 15px; fill: #5C7547">report</text>
+    <text x="166" y="80" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 15px">report</text>
     <defs><marker id="taxC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#B05730" stroke-width="1.8"/></marker></defs>
   </svg>
   <div class="note text-xl mt-1">Sub-agent</div>
@@ -921,9 +921,9 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 <div v-click="3">
   <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
     <rect x="14" y="50" width="92" height="46" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="60" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #B05730">agent A</text>
+    <text x="60" y="79" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 19px">agent A</text>
     <rect x="134" y="50" width="92" height="46" rx="12" fill="#e8eef5" stroke="#4E7CA8" stroke-width="2.5"/>
-    <text x="180" y="79" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #4E7CA8">agent B</text>
+    <text x="180" y="79" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 19px">agent B</text>
     <path d="M108 62 L 130 62" fill="none" stroke="#B05730" stroke-width="2.5" marker-end="url(#taxC)"/>
     <path d="M132 84 L 110 84" fill="none" stroke="#4E7CA8" stroke-width="2.5" marker-end="url(#taxB)"/>
     <defs><marker id="taxB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#4E7CA8" stroke-width="1.8"/></marker></defs>
@@ -963,36 +963,36 @@ resolvem conversar por uma hora?
   <!-- user -->
   <g>
     <rect x="20" y="150" width="120" height="60" rx="14" fill="none" stroke="#191919" stroke-width="2.5"/>
-    <text x="80" y="187" text-anchor="middle" style="font-family: Caveat; font-size: 26px; fill: #191919">você 👨🏽‍💻</text>
+    <text x="80" y="187" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 26px">você 👨🏽‍💻</text>
   </g>
   <!-- arrow user -> agent -->
   <path d="M145 178 C 180 170, 200 185, 235 178" fill="none" stroke="#191919" stroke-width="2.5" marker-end="url(#arr)"/>
   <!-- agent -->
   <g>
     <rect x="245" y="140" width="160" height="80" rx="16" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="325" y="175" text-anchor="middle" style="font-family: Caveat; font-size: 26px; fill: #B05730">agent 🤖</text>
-    <text x="325" y="205" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #B05730">(modelo + loop)</text>
+    <text x="325" y="175" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 26px">agent 🤖</text>
+    <text x="325" y="205" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 18px">(modelo + loop)</text>
   </g>
   <!-- loop arrows agent <-> tools -->
   <g v-click="1">
     <path d="M410 160 C 470 120, 540 120, 600 155" fill="none" stroke="#788C5D" stroke-width="2.5" marker-end="url(#arrG)"/>
-    <text x="505" y="115" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #788C5D">tool call</text>
+    <text x="505" y="115" text-anchor="middle" fill="#788C5D" style="font-family: Caveat; font-size: 22px">tool call</text>
     <path d="M600 205 C 540 245, 470 245, 410 205" fill="none" stroke="#788C5D" stroke-width="2.5" marker-end="url(#arrG)"/>
-    <text x="505" y="270" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #788C5D">resultado → contexto</text>
+    <text x="505" y="270" text-anchor="middle" fill="#788C5D" style="font-family: Caveat; font-size: 22px">resultado → contexto</text>
     <!-- tools -->
     <rect x="610" y="140" width="150" height="80" rx="16" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
-    <text x="685" y="175" text-anchor="middle" style="font-family: Caveat; font-size: 24px; fill: #5C7547">tools 🔧</text>
-    <text x="685" y="203" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #5C7547">bash · read · grep</text>
+    <text x="685" y="175" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 24px">tools 🔧</text>
+    <text x="685" y="203" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 17px">bash · read · grep</text>
   </g>
   <!-- token counter -->
   <g v-click="2">
-    <text x="325" y="300" text-anchor="middle" style="font-family: Caveat; font-size: 24px; fill: #BF4D43">contexto: 10k → 25k → 45k → 70k...</text>
-    <text x="325" y="330" text-anchor="middle" style="font-family: Caveat; font-size: 20px; fill: #BF4D43">cada volta paga o contexto inteiro de novo</text>
+    <text x="325" y="300" text-anchor="middle" fill="#BF4D43" style="font-family: Caveat; font-size: 24px">contexto: 10k → 25k → 45k → 70k...</text>
+    <text x="325" y="330" text-anchor="middle" fill="#BF4D43" style="font-family: Caveat; font-size: 20px">cada volta paga o contexto inteiro de novo</text>
   </g>
   <!-- result -->
   <g v-click="3">
     <path d="M325 140 C 320 90, 180 70, 145 110" fill="none" stroke="#191919" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arr)"/>
-    <text x="230" y="65" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #191919">resultado (depois de N voltas)</text>
+    <text x="230" y="65" text-anchor="middle" fill="#191919" style="font-family: Caveat; font-size: 22px">resultado (depois de N voltas)</text>
   </g>
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#191919" stroke-width="1.8"/></marker>
@@ -1075,7 +1075,7 @@ Diferença: na AWS quem cria recurso é você. No agent, o loop decide quantas v
     <!-- for sale sign -->
     <line x1="228" y1="167" x2="228" y2="112" stroke="#191919" stroke-width="3"/>
     <rect x="190" y="84" width="78" height="30" rx="4" fill="#f8e9e7" stroke="#BF4D43" stroke-width="2.5" transform="rotate(-4 229 99)"/>
-    <text x="229" y="106" text-anchor="middle" style="font-family: Caveat; font-size: 19px; fill: #BF4D43" transform="rotate(-4 229 99)">VENDE-SE</text>
+    <text x="229" y="106" text-anchor="middle" fill="#BF4D43" style="font-family: Caveat; font-size: 19px" transform="rotate(-4 229 99)">VENDE-SE</text>
   </svg>
   <div class="catch text-3xl text-left">Funcionar? Pode.<br>Mas quem paga os tokens<br>é a <span class="hl">escritura da casa</span>.</div>
 </div>
@@ -1405,7 +1405,7 @@ class: text-center
 
 <svg width="120" height="120" viewBox="0 0 120 120" class="mx-auto mb-2">
   <ellipse cx="60" cy="60" rx="50" ry="45" fill="none" stroke="#CC785C" stroke-width="3" transform="rotate(4 60 60)"/>
-  <text x="60" y="85" text-anchor="middle" style="font-family: Caveat; font-size: 72px; font-weight: 700; fill: #B05730">4</text>
+  <text x="60" y="85" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 72px; font-weight: 700">4</text>
 </svg>
 
 <div class="catch text-6xl text-center">Personas</div>
