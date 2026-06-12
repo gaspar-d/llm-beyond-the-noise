@@ -700,9 +700,9 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 <svg width="560" height="330" viewBox="0 0 600 360">
   <!-- harness (outer) -->
   <g v-click="3">
-    <ellipse cx="300" cy="185" rx="280" ry="168" fill="#EFEDE6" stroke="#191919" stroke-width="2.5" transform="rotate(-1.5 300 185)"/>
-    <text x="300" y="55" text-anchor="middle" style="font-family: Caveat; font-size: 27px; font-weight: 700; fill: #191919">HARNESS</text>
-    <text x="300" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4a4a44">+ contexto · permissões · quando parar</text>
+    <ellipse cx="300" cy="185" rx="280" ry="168" fill="#EFEDE6" stroke="#4E7CA8" stroke-width="2.5" transform="rotate(-1.5 300 185)"/>
+    <text x="300" y="55" text-anchor="middle" style="font-family: Caveat; font-size: 27px; font-weight: 700; fill: #4E7CA8">HARNESS</text>
+    <text x="300" y="80" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4E7CA8">+ contexto · permissões · quando parar</text>
   </g>
   <!-- agent (middle) -->
   <g v-click="2">
@@ -713,8 +713,8 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
   <!-- model (inner) -->
   <g v-click="1">
     <ellipse cx="300" cy="240" rx="112" ry="62" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5" transform="rotate(-2 300 240)"/>
-    <text x="300" y="235" text-anchor="middle" style="font-family: Caveat; font-size: 25px; font-weight: 700; fill: #191919">MODELO</text>
-    <text x="300" y="260" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #4a4a44">prevê o próximo token</text>
+    <text x="300" y="235" text-anchor="middle" style="font-family: Caveat; font-size: 25px; font-weight: 700; fill: #5C7547">MODELO</text>
+    <text x="300" y="260" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #5C7547">prevê o próximo token</text>
   </g>
 </svg>
 </div>
@@ -753,8 +753,8 @@ E os desastres que vêm aí (Replit, PocketOS): falha de harness (rédea frouxa)
   <!-- agent -->
   <g>
     <rect x="245" y="140" width="160" height="80" rx="16" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="325" y="175" text-anchor="middle" style="font-family: Caveat; font-size: 26px; fill: #191919">agent 🤖</text>
-    <text x="325" y="205" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #4a4a44">(modelo + loop)</text>
+    <text x="325" y="175" text-anchor="middle" style="font-family: Caveat; font-size: 26px; fill: #B05730">agent 🤖</text>
+    <text x="325" y="205" text-anchor="middle" style="font-family: Caveat; font-size: 18px; fill: #B05730">(modelo + loop)</text>
   </g>
   <!-- loop arrows agent <-> tools -->
   <g v-click="1">
@@ -764,8 +764,8 @@ E os desastres que vêm aí (Replit, PocketOS): falha de harness (rédea frouxa)
     <text x="505" y="270" text-anchor="middle" style="font-family: Caveat; font-size: 22px; fill: #788C5D">resultado → contexto</text>
     <!-- tools -->
     <rect x="610" y="140" width="150" height="80" rx="16" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
-    <text x="685" y="175" text-anchor="middle" style="font-family: Caveat; font-size: 24px; fill: #191919">tools 🔧</text>
-    <text x="685" y="203" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #4a4a44">bash · read · grep</text>
+    <text x="685" y="175" text-anchor="middle" style="font-family: Caveat; font-size: 24px; fill: #5C7547">tools 🔧</text>
+    <text x="685" y="203" text-anchor="middle" style="font-family: Caveat; font-size: 17px; fill: #5C7547">bash · read · grep</text>
   </g>
   <!-- token counter -->
   <g v-click="2">
