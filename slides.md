@@ -31,16 +31,31 @@ layout: center
 class: text-center
 ---
 
-<div class="catch">Agentes são incríveis.</div>
+<div class="kicker mb-8">quem vos fala</div>
 
-<v-click>
+<div class="grid grid-cols-2 gap-12 items-center" style="max-width: 880px; margin: 0 auto">
 
-<div class="catch mt-6">E é <span class="hl">exatamente por isso</span><br>que eles vão queimar seu budget.</div>
+<div class="text-center">
+  <img src="./foto.png" alt="Diogo Gaspar" class="mx-auto" style="width: 210px; height: 210px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid var(--ink); transform: rotate(-2deg); background: #f7e8e1" />
+  <div class="catch text-4xl mt-4">Diogo Gaspar</div>
+  <div class="note text-2xl">Cara do TI</div>
+</div>
 
-</v-click>
+<div class="text-left text-xl" style="line-height: 2.2">
+  <div v-click="1">🤓 Nerd</div>
+  <div v-click="2">💍 "Senhor dos Anéis é o melhor filme da história" <span class="note text-lg">(fato, não opinião)</span></div>
+  <div v-click="3">🍺 Sommelier de cerveja</div>
+  <div v-click="4">🥩 Churrasqueiro</div>
+  <div v-click="5" class="mt-2"><span class="sketch-box clay" style="padding: 0.2rem 0.8rem">🧮 <b>Mão de vaca</b></span> <span class="note text-lg">← qualificação principal pra essa talk</span></div>
+</div>
+
+</div>
 
 <!--
-Tese da talk em uma frase. Pausa dramática antes do clique.
+Apresentação rápida, um clique por item — o "mão de vaca" é o gancho:
+"e é exatamente por isso que eu vou falar de custo de IA hoje."
+Tese da talk pra falar de boca (era o slide antigo): "Agentes são incríveis.
+E é exatamente por isso que eles vão queimar seu budget."
 A talk NÃO é anti-agent. É anti-desperdício.
 -->
 
@@ -153,19 +168,19 @@ layout: center
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">1️⃣ &nbsp;Como funciona por baixo — tokens, a API sem memória, e por que sua fatura já sabe</div>
+<div class="sketch-box mb-4 text-xl">1️⃣ &nbsp;TL;DR alguém resume? — tokens, janela de contexto, quanto é 2+2?, </div>
 
 </v-click>
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;Skills — lazy loading e o CLAUDE.md em dieta</div>
+<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;Skills — lazy loading e o CLAUDE.md entrando em dieta</div>
 
 </v-click>
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">3️⃣ &nbsp;Agents — while loops com cartão de crédito <span class="note text-xl">(tem DB de produção deletado)</span></div>
+<div class="sketch-box mb-4 text-xl">3️⃣ &nbsp;Agents — loops com cartão de crédito </div>
 
 </v-click>
 
@@ -191,9 +206,9 @@ layout: center
   <text x="60" y="85" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 72px; font-weight: 700">1</text>
 </svg>
 
-<div class="catch text-6xl text-center">Como funciona por baixo</div>
+<div class="catch text-6xl text-center">TL;DR alguém me explica?</div>
 
-<div class="note text-2xl text-center mt-6">spoiler: é tudo previsão de token</div>
+<div class="note text-2xl text-center mt-6">spoiler: no fim é tudo sobre tokens</div>
 
 <!--
 Divisor de capítulo. Respira. 3 segundos e segue.
@@ -338,9 +353,11 @@ layout: center
 class: text-center
 ---
 
-<div class="kicker mb-6">parte 1 · como isso funciona por baixo</div>
+<div class="kicker mb-6">parte 1 · E pra onde vão os tokens?</div>
 
-<div class="catch">A API é <span class="hl sketch-under">stateless</span>.</div>
+<div class="catch">O Modelo a API e o <span class="hl sketch-under">Stateless</span>.</div>
+
+<div class="note text-lg">(referência ao The Good The Bad and The Ugly)</div>
 
 <v-click>
 
@@ -413,7 +430,7 @@ Comentário en passant: "duvida? coloca $5 na API e tenta manter um papo — spo
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">💸 É <b>desconto</b>, não isenção: 10 turnos = 10 cobranças <span class="note text-lg">(melhor caso: 1 write + 9 reads a ~10%)</span></div>
+<div class="sketch-box mb-4 text-xl">💸 É <b>desconto</b>, não isenção: 10 turnos = 10 cobranças <span class="note text-lg">(melhor caso: 1 write a 1,25× + 9 reads a 0,1× do preço cheio)</span></div>
 
 </v-click>
 
