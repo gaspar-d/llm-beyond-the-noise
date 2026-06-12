@@ -611,7 +611,7 @@ class: text-center
 
 <div class="catch text-6xl text-center">Skills</div>
 
-<div class="note text-2xl text-center mt-6">lazy loading pra gente preguiçosa (é elogio)</div>
+<div class="note text-2xl text-center mt-6"><span class="hl"> lazy loading</span> porque traballhar só de vez enquando é bem melhor</div>
 
 <!--
 Divisor de capítulo.
