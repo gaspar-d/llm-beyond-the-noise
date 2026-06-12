@@ -29,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Build slides
-        run: npx slidev build --base /${{ github.event.repository.name }}/
+        run: npx slidev build --base /llm-beyond-the-noise/
 
       - uses: actions/configure-pages@v4
 

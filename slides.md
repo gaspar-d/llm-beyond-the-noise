@@ -11,6 +11,7 @@ drawings:
 transition: fade
 mdc: true
 colorSchema: auto
+routerMode: hash
 fonts:
   sans: Space Grotesk
   mono: JetBrains Mono
