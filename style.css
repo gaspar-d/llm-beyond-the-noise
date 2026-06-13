@@ -113,6 +113,11 @@
   background: #e4e3dd;
 }
 
+.sketch-box.gold {
+  border-color: #C9A227;
+  background: #f5ecce;
+}
+
 /* Hand-drawn underline accent */
 .sketch-under {
   position: relative;
@@ -258,6 +263,7 @@ html.dark .sketch-box.clay { background: #3b2f27; border-color: #d99068; }
 html.dark .sketch-box.olive { background: #2e342b; border-color: #93a878; }
 html.dark .sketch-box.danger { background: #3a2a27; border-color: #d97a70; }
 html.dark .sketch-box.security { background: #2a2925; border-color: #b3afa3; }
+html.dark .sketch-box.gold { background: #3a3422; border-color: #c9a855; }
 
 /* Token chips */
 html.dark .tokrow > span { color: #e8b48f; }

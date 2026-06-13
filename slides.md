@@ -1416,19 +1416,21 @@ O que NENHUM faz: definir um tipo novo de sub-agent sozinho.
 
 <div v-click="1">
   <div class="sketch-box olive font-mono text-sm" style="text-align: left">---<br>name: release-process<br>description: Processo de release interno.<br>&nbsp;&nbsp;Use quando a tarefa envolver deploy.<br>---<br># Passo a passo<br>1. Trava a branch...<br>2. Roda o pipeline...</div>
-  <div class="note text-xl mt-2 text-center">📖 Skill: vira <b>conhecimento</b><br><span class="text-base">o corpo entra no <b>seu</b> contexto</span></div>
+  <div class="note text-xl mt-2 text-center">📖 Skill: <span class="text-base">o body entra no <span class="hl sketch-under">seu context</span></span></div>
+  <div class="note text-base mt-1 text-center" style="color: var(--ink-soft)"><span class="hl">ex:</span> guia de release, padrões de PR, runbook de incidente</div>
 </div>
 
 <div v-click="2">
-  <div class="sketch-box font-mono text-sm" style="text-align: left; border-color: #C9A227; background: #f5ecce">---<br>name: code-reviewer<br>description: Revisa PRs. Use proactively<br>&nbsp;&nbsp;em todo diff.<br><span style="color: #B05730"><b>tools: Read, Grep, Bash</b></span><br><span style="color: #B05730"><b>model: haiku</b></span><br>---<br>Você revisa código. Reporte só:<br>arquivo, problema, severidade.</div>
-  <div class="note text-xl mt-2 text-center">👷 Sub-agent: vira <b>trabalhador</b><br><span class="text-base">o corpo é o system prompt de <b>outro</b> contexto</span></div>
+  <div class="sketch-box gold font-mono text-sm" style="text-align: left">---<br>name: code-reviewer<br>description: Revisa PRs Usando git diff.<br><span style="color: var(--clay-dark)"><b>tools: Read, Grep, Bash</b></span><br><span style="color: var(--clay-dark)"><b>model: haiku</b></span><br>---<br># Reportar no formato: <br>-> arquivo -> problema -> severidade</div>
+  <div class="note text-xl mt-2 text-center">👷 Sub-agent: <span class="text-base">o body entra em <span class="hl sketch-under">um context novo</span></span></div>
+  <div class="note text-base mt-1 text-center" style="color: var(--ink-soft)"><span class="hl">ex:</span> revisor de PR, buscador de logs em incidente</div>
 </div>
 
 </div>
 
 <v-click at="3">
 
-<div class="catch mt-6 text-3xl">Um vira leitura. O outro, <span class="hl">mão de obra</span>.</div>
+<div class="catch mt-6 text-3xl">Ser parecido não é atoa!<br> É fácil converter <span class="hl">Skill em Sub-Agent</span> e vice-versa.</div>
 
 </v-click>
 
@@ -1630,5 +1632,3 @@ class: text-center
 Fechamento. Voltar à tese: não é anti-agent, é anti-desperdício.
 Deixar o slide da tabela acessível pro Q&A (tecla ← volta).
 -->
-
-
