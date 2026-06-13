@@ -611,7 +611,7 @@ class: text-center
 
 <div class="catch text-6xl text-center">Skills</div>
 
-<div class="note text-2xl text-center mt-6"><span class="hl"> lazy loading</span> porque traballhar só de vez enquando é bem melhor</div>
+<div class="note text-2xl text-center mt-6"><span class="hl"> Lazy loading</span> porque traballhar só de vez enquando é bem melhor ♥️</div>
 
 <!--
 Divisor de capítulo.
@@ -624,7 +624,7 @@ class: text-center
 
 <div class="kicker mb-6">parte 2 · skills</div>
 
-<div class="catch text-5xl">Skills ♥️ <span class="hl sketch-under">Lazy Loading</span></div>
+<div class="catch text-5xl">Skills & <span class="hl sketch-under">Lazy Loading</span></div>
 
 <div class="mx-auto mt-8" style="max-width: 860px">
 
@@ -642,7 +642,7 @@ class: text-center
 
 <div class="sketch-box font-mono text-sm" style="text-align: left; border-style: dashed; opacity: 0.6">
 # Release passo a passo<br>
-1. Congela a branch...<br>
+1. Trava a branch...<br>
 2. Roda o pipeline de...<br>
 3. Valida o changelog...<br>
 <span style="opacity: 0.7">... (+500 linhas de processo)</span>
@@ -798,7 +798,7 @@ Divisor de capítulo. A parte mais longa da talk.
 
 <div class="kicker mb-4">parte 3 · o vocabulário do momento</div>
 
-## Modelo, Agent, Harness
+## Model, Agent, Harness
 
 <div class="flex justify-center mt-2">
 <svg width="560" height="330" viewBox="0 0 600 360">
@@ -847,7 +847,7 @@ class: text-center
 
 <div class="kicker mb-6">parte 3 · agents</div>
 
-<div class="catch">Agent é um <span class="hl sketch-under">while loop</span>.</div>
+<div class="catch">Agent <span class="hl sketch-under">Loop</span>.</div>
 
 <v-click>
 
@@ -859,6 +859,12 @@ while (!done) {
   callTool();
   appendToContext();
   pay()// 💸
+}
+enquanto (não terminou) { 
+  pensa(); 
+  usaFerramenta(); 
+  anexaNoContexto(); 
+  pagaOsTokens()// 💸 
 }
 ```
 
@@ -902,18 +908,22 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 
 <div v-click="2">
   <svg width="240" height="150" viewBox="0 0 240 150" class="mx-auto">
-    <rect x="75" y="12" width="90" height="42" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
-    <text x="120" y="39" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 20px">agent</text>
-    <rect x="84" y="96" width="72" height="38" rx="10" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
-    <text x="120" y="121" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 18px">sub-agent</text>
-    <path d="M104 56 C 98 70, 98 80, 104 93" fill="none" stroke="#B05730" stroke-width="2.5" marker-end="url(#taxC)"/>
-    <text x="78" y="80" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 15px">brief</text>
-    <path d="M136 93 C 142 80, 142 70, 136 57" fill="none" stroke="#788C5D" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#taxG)"/>
-    <text x="166" y="80" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 15px">report</text>
+    <rect x="55" y="12" width="90" height="42" rx="12" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5"/>
+    <text x="100" y="39" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 20px">agent</text>
+    <rect x="22" y="96" width="92" height="38" rx="10" fill="#f5ecce" stroke="#C9A227" stroke-width="2.5"/>
+    <text x="68" y="121" text-anchor="middle" fill="#9a7b1e" style="font-family: Caveat; font-size: 18px">sub-agent</text>
+    <path d="M82 56 C 72 70, 68 80, 64 93" fill="none" stroke="#B05730" stroke-width="2.5" marker-end="url(#taxC)"/>
+    <text x="48" y="74" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 15px">brief</text>
+    <path d="M96 93 C 106 80, 110 70, 114 57" fill="none" stroke="#788C5D" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#taxG)"/>
+    <text x="129" y="80" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 15px">report</text>
+    <rect x="158" y="98" width="68" height="34" rx="9" fill="#eef0e7" stroke="#788C5D" stroke-width="2.5"/>
+    <text x="192" y="120" text-anchor="middle" fill="#5C7547" style="font-family: Caveat; font-size: 16px">tools</text>
+    <path d="M118 104 C 130 96, 144 96, 156 103" fill="none" stroke="#788C5D" stroke-width="2" marker-end="url(#taxG)"/>
+    <path d="M156 127 C 144 134, 130 134, 118 126" fill="none" stroke="#788C5D" stroke-width="2" marker-end="url(#taxG)"/>
     <defs><marker id="taxC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6" fill="none" stroke="#B05730" stroke-width="1.8"/></marker></defs>
   </svg>
   <div class="note text-xl mt-1">Sub-agent</div>
-  <div class="text-sm">Estagiário <b>descartável</b>: brief entra,<br>report sai, contexto morre.</div>
+  <div class="text-sm">Servente de pedreiro do Agent: brief entra,<br>report sai, contexto morre.</div>
 </div>
 
 <div v-click="3">
@@ -934,7 +944,7 @@ Não é "o modelo refinando a resposta sozinho" — é agir, observar, repetir.
 
 <v-click at="4">
 
-<div class="catch mt-8 text-2xl">Loop: um agent e suas tools. Sub-agent: estagiário descartável.<br>A2A: dois agents — e <span class="hl">duas faturas</span>.</div>
+<div class="catch mt-8 text-2xl">Loop: um agent e suas tools. Sub-agent: estagiário.<br>A2A: dois agents — e <span class="hl">duas faturas</span>.</div>
 
 </v-click>
 
@@ -1106,7 +1116,7 @@ Gancho pro próximo slide: e mesmo quando funciona E cabe no bolso... → compre
 
 <div v-click="2">
   <div class="stat">−17%</div>
-  <div class="stat-label">compreensão do próprio código (52 engenheiros, mesma velocidade de entrega — pior em <b>debugging</b>)</div>
+  <div class="stat-label">compreensão do próprio código (52 engenheiros, mesma velocidade de entrega <span class="hl">mas</span> pior em <b>debugging</b>)</div>
 </div>
 
 <div v-click="3">
@@ -1192,7 +1202,7 @@ Gancho: "2025, ferramenta imatura, a gente aprendeu, né? ... Né?"
 
 <div v-click="3" class="sketch-box danger" style="padding: 0.6rem 1.2rem">
   <div class="note text-lg mb-1">🛒 Amazon Kiro · março/2026</div>
-  <div class="text-sm">Duas quedas na loja em uma semana: 6h fora, <b>99% das orders dos EUA perdidas</b> (~6,3M pedidos).</div>
+  <div class="text-sm">Duas quedas na loja em uma semana: 6hs fora, <b>99% das orders dos EUA perdidas</b> (~6,3M pedidos).</div>
 </div>
 
 <div v-click="4" class="sketch-box danger" style="padding: 0.6rem 1.2rem">
@@ -1394,6 +1404,78 @@ Formato do arquivo é quase igual ao de uma Skill (markdown + frontmatter).
 Claude Code, Cursor 2.4+ e OpenCode: todos delegam proativamente pela description.
 "use proactively" na description aumenta a chance de delegação automática.
 O que NENHUM faz: definir um tipo novo de sub-agent sozinho.
+-->
+
+---
+
+<div class="kicker mb-4">parte 3 · how-to: mesma capa, destinos opostos</div>
+
+## Skill vs Sub-agent, lado a lado
+
+<div class="mt-4 grid grid-cols-2 gap-8 items-start">
+
+<div v-click="1">
+  <div class="sketch-box olive font-mono text-sm" style="text-align: left">---<br>name: release-process<br>description: Processo de release interno.<br>&nbsp;&nbsp;Use quando a tarefa envolver deploy.<br>---<br># Passo a passo<br>1. Trava a branch...<br>2. Roda o pipeline...</div>
+  <div class="note text-xl mt-2 text-center">📖 Skill: vira <b>conhecimento</b><br><span class="text-base">o corpo entra no <b>seu</b> contexto</span></div>
+</div>
+
+<div v-click="2">
+  <div class="sketch-box font-mono text-sm" style="text-align: left; border-color: #C9A227; background: #f5ecce">---<br>name: code-reviewer<br>description: Revisa PRs. Use proactively<br>&nbsp;&nbsp;em todo diff.<br><span style="color: #B05730"><b>tools: Read, Grep, Bash</b></span><br><span style="color: #B05730"><b>model: haiku</b></span><br>---<br>Você revisa código. Reporte só:<br>arquivo, problema, severidade.</div>
+  <div class="note text-xl mt-2 text-center">👷 Sub-agent: vira <b>trabalhador</b><br><span class="text-base">o corpo é o system prompt de <b>outro</b> contexto</span></div>
+</div>
+
+</div>
+
+<v-click at="3">
+
+<div class="catch mt-6 text-3xl">Um vira leitura. O outro, <span class="hl">mão de obra</span>.</div>
+
+</v-click>
+
+<div class="sources">
+Source: <a href="https://code.claude.com/docs/en/claude-directory#ce-agents" target="_blank">code.claude.com/docs — Claude directory (agents)</a>
+</div>
+
+<!--
+As duas diferenças que importam, destacadas em laranja no sub-agent:
+tools (allowlist do que ele pode usar) e model (cost routing! log grep no Haiku
+enquanto o principal fica no modelo caro).
+Skill = livro que o agent lê. Sub-agent = estagiário que o agent contrata.
+"use proactively" na description → delegação automática.
+-->
+
+---
+
+<div class="kicker mb-4">parte 3 · onde mora cada coisa</div>
+
+## A estrutura no seu repo
+
+<div class="flex justify-center mt-6">
+<div class="sketch-box font-mono text-base" style="text-align: left; white-space: pre; padding: 1.2rem 2.2rem">projeto/
+├── <span style="color: #CC785C"><b>CLAUDE.md</b></span>            <span class="note text-base" style="white-space: pre">← sempre no contexto (enxuto!)</span>
+└── .claude/
+    ├── skills/
+    │   └── release-process/
+    │       └── <span style="color: #788C5D"><b>SKILL.md</b></span>  <span class="note text-base" style="white-space: pre">← conhecimento sob demanda</span>
+    └── agents/
+        └── <span style="color: #C9A227"><b>code-reviewer.md</b></span>  <span class="note text-base" style="white-space: pre">← trabalhador isolado</span></div>
+</div>
+
+<v-click>
+
+<div class="note text-2xl text-center mt-6">Mesma estrutura em <code>~/.claude/</code> = vale pra todos os seus projetos.</div>
+
+</v-click>
+
+<div class="sources">
+Source: <a href="https://code.claude.com/docs/en/claude-directory" target="_blank">code.claude.com/docs — Claude directory</a>
+</div>
+
+<!--
+O slide "começa segunda-feira": três arquivos, três papéis, cores da talk inteira
+(clay = sempre carregado, verde = sob demanda, amarelo = isolado).
+Projeto = vale pro repo; ~/.claude/ = global da máquina.
+Lembrar a regra: CLAUDE.md enxuto; conhecimento pesado → skill; trabalho sujo → agent.
 -->
 
 ---

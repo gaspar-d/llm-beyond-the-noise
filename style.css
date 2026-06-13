@@ -274,6 +274,8 @@ html.dark .slidev-layout svg [fill="#eef0e7"] { fill: #2e342b; }
 html.dark .slidev-layout svg [fill="#e8eef5"] { fill: #272f3a; }
 html.dark .slidev-layout svg [fill="#f8e9e7"] { fill: #3a2a27; }
 html.dark .slidev-layout svg [fill="#D4A27F"] { fill: #8a6b48; }
+html.dark .slidev-layout svg [fill="#f5ecce"] { fill: #3a3422; }
+html.dark .slidev-layout svg text[fill="#9a7b1e"] { fill: #d9b94a; }
 
 /* SVG strokes */
 html.dark .slidev-layout svg [stroke="#191919"] { stroke: #c9c5b9; }
