@@ -16,7 +16,7 @@ fonts:
   mono: JetBrains Mono
 ---
 
-<div class="catch">LLM: Beyond the <span class="hl sketch-under">Noise</span></div>
+<div class="catch">LLM: Além do <span class="hl sketch-under">Barulho</span></div>
 
 <div class="catch-sub">Como usar IA sem falir a empresa</div>
 
@@ -145,7 +145,7 @@ A talk NÃO é anti-agent. É anti-desperdício.
 
 <v-click at="5">
 
-<div class="catch text-3xl mt-2">A cova já está cavada. <span class=hl>Mas será?</span></div>
+<div class="catch text-3xl mt-2">Ninguém sabe, mas vamos tentar <span class=hl>descobrir</span>?</div>
 
 </v-click>
 
@@ -174,7 +174,7 @@ layout: center
 
 <v-click>
 
-<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;Skills — lazy loading e o CLAUDE.md entrando em dieta</div>
+<div class="sketch-box mb-4 text-xl">2️⃣ &nbsp;Skills — lazy loading e o CLAUDE.md</div>
 
 </v-click>
 
@@ -270,7 +270,7 @@ Isso planta a base pro slide seguinte: o modelo só enxerga o mundo nesses peda�
 
 ---
 
-<div class="kicker mb-4">parte 1 · primeiro: o que o modelo faz</div>
+<div class="kicker mb-4">parte 1 · o que o modelo faz</div>
 
 ## O modelo não calcula. Ele estima.
 
@@ -1410,7 +1410,7 @@ O que NENHUM faz: definir um tipo novo de sub-agent sozinho.
 
 <div class="kicker mb-4">parte 3 · how-to: mesma capa, destinos opostos</div>
 
-## Skill vs Sub-agent, lado a lado
+## Skill vs Sub-agent, 5 minutos de porrada quem ganha?
 
 <div class="mt-4 grid grid-cols-2 gap-8 items-start">
 
@@ -1576,14 +1576,15 @@ Pra sub-agents é pior ainda: ele só fala com o agent principal. Não tem human
   <div class="note text-xl mb-2">✅ Constraints</div>
   <div class="font-mono text-base">
     Nível: senior/staff<br>
-    Domínio: fintech, produção<br>
+    Domínio: fintech, Java<br>
     Standards: SOLID, TDD<br>
-    Tom: direto, sem filler<br>
-    Temperature: 0
+    Temperature: 0<br>
   </div>
 </div>
 
 </div>
+
+<div class="catch-sub">Os dois tem seu lugar.<br> <span class="hl sketch-under" >Você</span> decide quando usar cada</div>
 
 <!--
 Mesma intenção, zero teatro. Constraints dizem O QUE você quer, não QUEM ele deveria fingir ser.
@@ -1602,7 +1603,7 @@ layout: center
 | Às vezes, em tarefas específicas | **Skills** (lazy loading) |
 | Trabalho pesado que poluiria seu contexto | **Sub-agents** (isolado, paralelo) |
 | Sem humano no loop, com ROI claro | **Agents** (automação) |
-| Imitar um humano de 30 anos de XP | **Nada. Pare.** |
+| Imitar um humano de 30 anos de XP | **~~Nada. Pare.~~** Personas |
 
 <!--
 ESTE é o slide que o pessoal vai fotografar. Dar tempo.
@@ -1614,11 +1615,11 @@ layout: center
 class: text-center
 ---
 
-<div class="catch">Use a ferramenta <span class="hl sketch-under">mais barata</span><br>que resolve o problema.</div>
+<div class="catch-sub">Use a ferramenta <span class="hl sketch-under">mais barata</span><br>que resolve o problema.</div>
 
 <v-click>
 
-<div class="catch-sub mt-10">IA não é mágica. É infra.<br>E infra tem fatura.</div>
+<div class="catch mt-10">IA não é mágica. É infra.<br>E infra tem fatura.</div>
 
 </v-click>
 
