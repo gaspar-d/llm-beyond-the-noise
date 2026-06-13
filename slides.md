@@ -1629,6 +1629,33 @@ class: text-center
 
 </v-click>
 
+<v-click>
+
+<div class="mt-10 flex justify-center items-center gap-8 flex-wrap" style="opacity: 0.55">
+  <div class="flex items-center gap-2">
+    <img src="https://cdn.simpleicons.org/anthropic/4a4a44" class="h-5 w-5" style="display:inline" />
+    <span class="note text-lg">Claude Cowork</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <img src="https://sli.dev/logo.svg" class="h-5 w-5" style="display:inline" />
+    <span class="note text-lg">Slidev</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <img src="https://vuejs.org/logo.svg" class="h-5 w-5" style="display:inline" />
+    <span class="note text-lg">Vue</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <img src="https://vitejs.dev/logo.svg" class="h-5 w-5" style="display:inline" />
+    <span class="note text-lg">Vite</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <img src="https://cdn.simpleicons.org/github/4a4a44" class="h-5 w-5" style="display:inline" />
+    <span class="note text-lg">GitHub Pages</span>
+  </div>
+</div>
+
+</v-click>
+
 <!--
 Fechamento. Voltar à tese: não é anti-agent, é anti-desperdício.
 Deixar o slide da tabela acessível pro Q&A (tecla ← volta).
