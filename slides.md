@@ -20,7 +20,10 @@ fonts:
 
 <div class="catch-sub">Como usar IA sem falir a empresa</div>
 
-<div class="mt-14 note">Gaspar · NTT Data · 2026</div>
+<div class="mt-14 flex justify-center items-center gap-3">
+  <img src="https://www.nttdata.com/global/en/-/media/assets/images/header_logo.svg" class="nttdata-logo" style="height: 1.3rem; margin-top: 0.1rem" />
+  <span class="note">· 2026</span>
+</div>
 
 <!--
 Boas-vindas. Quebra-gelo: "quem aqui já pediu pro agent renomear uma pasta? Então, essa talk é pra você."

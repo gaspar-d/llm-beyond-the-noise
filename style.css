@@ -215,6 +215,10 @@
 .tokrow > span:nth-child(4n+3) { background: #e8eef5; }
 .tokrow > span:nth-child(4n) { background: #f3e8da; }
 
+/* NTT DATA logo color adapt */
+.nttdata-logo { filter: brightness(0); }
+html.dark .nttdata-logo { filter: brightness(0) invert(1); }
+
 /* Sources footer */
 .sources {
   position: absolute;
