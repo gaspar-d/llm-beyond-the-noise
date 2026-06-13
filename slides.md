@@ -1453,19 +1453,19 @@ Skill = livro que o agent lê. Sub-agent = estagiário que o agent contrata.
 ## A estrutura no seu repo
 
 <div class="flex justify-center mt-6">
-<div class="sketch-box font-mono text-base" style="text-align: left; white-space: pre; padding: 1.2rem 2.2rem">projeto/
-├── <span style="color: #CC785C"><b>CLAUDE.md</b></span>            <span class="note text-base" style="white-space: pre">← sempre no contexto (enxuto!)</span>
-└── .claude/
-    ├── skills/
-    │   └── release-process/
-    │       └── <span style="color: #788C5D"><b>SKILL.md</b></span>  <span class="note text-base" style="white-space: pre">← conhecimento sob demanda</span>
-    └── agents/
-        └── <span style="color: #C9A227"><b>code-reviewer.md</b></span>  <span class="note text-base" style="white-space: pre">← trabalhador isolado</span></div>
+<div class="sketch-box font-mono text-base" style="text-align: left; padding: 1.2rem 2.2rem">projeto/<br>
+├── <span style="color: #CC785C"><b>CLAUDE.md</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="note text-base">← sempre no contexto (enxuto!)</span><br>
+└── .claude/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── skills/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── release-process/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span style="color: #788C5D"><b>SKILL.md</b></span>&nbsp;&nbsp;<span class="note text-base">← conhecimento sob demanda</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;└── agents/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span style="color: #C9A227"><b>code-reviewer.md</b></span>&nbsp;&nbsp;<span class="note text-base">← trabalhador isolado</span></div>
 </div>
 
 <v-click>
 
-<div class="note text-2xl text-center mt-6">Mesma estrutura em <code>~/.claude/</code> = vale pra todos os seus projetos.</div>
+<div class="note text-2xl text-center mt-6">Essa mesma estrutura do <code>~/.claude/</code> = vale pra todos os seus projetos.</div>
 
 </v-click>
 
