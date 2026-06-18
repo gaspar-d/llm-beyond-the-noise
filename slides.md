@@ -801,21 +801,21 @@ Divisor de capítulo. A parte mais longa da talk.
 
 <div class="kicker mb-4">parte 3 · o vocabulário do momento</div>
 
-## Model, Agent, Harness
+## Model, Harness, Agent
 
 <div class="flex justify-center mt-2">
 <svg width="560" height="330" viewBox="0 0 600 360">
-  <!-- harness (outer) -->
+  <!-- agent (outer) -->
   <g v-click="3">
     <ellipse cx="300" cy="185" rx="280" ry="168" fill="#EFEDE6" stroke="#4E7CA8" stroke-width="2.5" transform="rotate(-1.5 300 185)"/>
-    <text x="300" y="55" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 27px; font-weight: 700">HARNESS</text>
-    <text x="300" y="80" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 18px">+ contexto · permissões · quando parar</text>
+    <text x="300" y="55" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 27px; font-weight: 700">AGENT</text>
+    <text x="300" y="80" text-anchor="middle" fill="#4E7CA8" style="font-family: Caveat; font-size: 18px">= modelo + harness · o sistema todo</text>
   </g>
-  <!-- agent (middle) -->
+  <!-- harness (middle) -->
   <g v-click="2">
     <ellipse cx="300" cy="210" rx="195" ry="115" fill="#f7e8e1" stroke="#B05730" stroke-width="2.5" transform="rotate(1.2 300 210)"/>
-    <text x="300" y="128" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 25px; font-weight: 700">AGENT</text>
-    <text x="300" y="151" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 18px">+ while loop · tools</text>
+    <text x="300" y="128" text-anchor="middle" fill="#B05730" style="font-family: Caveat; font-size: 25px; font-weight: 700">HARNESS</text>
+    <text x="300" y="151" text-anchor="middle" fill="#4a4a44" style="font-family: Caveat; font-size: 18px">+ loop · tools · contexto · quando parar</text>
   </g>
   <!-- model (inner) -->
   <g v-click="1">
@@ -828,19 +828,22 @@ Divisor de capítulo. A parte mais longa da talk.
 
 <v-click at="4">
 
-<div class="catch text-3xl mt-0">O modelo pensa. O agent age.<br>O harness <span class="hl">segura as rédeas</span>.</div>
+<div class="catch text-3xl mt-0">O modelo pensa. O harness executa.<br>O <span class="hl">agent</span> é os dois juntos.</div>
 
 </v-click>
 
+<div class="sources">
+Sources: <a href="https://huggingface.co/blog/agent-glossary" target="_blank">huggingface.co — Harness, Scaffold, and the AI Agent Terms Worth Getting Right</a> · <a href="https://code.claude.com/docs/en/how-claude-code-works" target="_blank">code.claude.com — How Claude Code works</a>
+</div>
+
 <!--
-Harness é O termo de 2026 — definir antes que alguém pergunte.
+Consenso 2026: Agent = Model + Harness (HuggingFace, LangChain, comunidade).
+Harness é a camada de execução: chama o modelo, roda as tools, decide quando parar.
+Anthropic chama o Claude Code de "agentic harness" — nesse contexto, Claude Code É o harness,
+e o sistema todo (Claude Code + modelo) é o agent.
 Harness é literalmente "arreio": o cavalo é forte, mas é o arreio que decide pra onde a força vai.
-Analogia pra sala: kernel vs distro. O loop é o kernel (genérico, extraído nos Agent SDKs —
-Anthropic, OpenAI, Google ADK). O harness é a distro: tools, permissões e defaults pra UM domínio.
 Claude Code = harness de SWE. Claude in Excel = harness de planilha. Sierra/Fin = de suporte.
-Gancho pro fim da parte 3: não reconstrua o harness de código — construa o do SEU domínio.
-E os desastres que vêm aí (Replit, PocketOS): falha de harness (rédea frouxa), não de modelo.
-Gancho pro próximo: "vamos abrir o anel do meio: o que é esse loop?"
+Gancho pro próximo: "vamos abrir o harness: o que é esse loop?"
 -->
 
 ---
