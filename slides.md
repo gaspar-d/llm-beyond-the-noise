@@ -804,7 +804,7 @@ Divisor de capítulo. A parte mais longa da talk.
 ## Model, Harness, Agent
 
 <div class="flex justify-center mt-2">
-<svg width="560" height="330" viewBox="0 0 600 360">
+<svg width="560" height="265" viewBox="0 0 600 360">
   <!-- agent (outer) -->
   <g v-click="3">
     <ellipse cx="300" cy="185" rx="280" ry="168" fill="#EFEDE6" stroke="#4E7CA8" stroke-width="2.5" transform="rotate(-1.5 300 185)"/>
